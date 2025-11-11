@@ -1,0 +1,82 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "This experiment demonstrates a data hiding technique in the lower file slack area of a file stored within a distributed MooseFS environment. The underlying FAT32-formatted chunk storage volume was modified directly at the byte level to insert hidden data below the logical end of a MooseFS chunk file. Logical integrity was maintained by recalculating and updating the chunks CRC32 checksum.",
+  "system": {
+    "filesystem": "MooseFS",
+    "master_server_path": "/var/lib/mfs",
+    "chunk_volume_image": "/var/lib/moosefs/mfs_fat32.img",
+    "client_mount_point": "/mnt/mfs",
+    "chunk_storage_path": "/mnt/mfschunks",
+    "underlying_fs_type": "FAT32",
+    "sector_size_bytes": 512,
+    "cluster_size_bytes": 4096,
+    "chunk_size_bytes": 65536
+  },
+  "image_name": "MooseFS_lower_FileSlack.img",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "target_file_info": {
+    "logical_file_name": "test_1.txt",
+    "logical_path": "/mnt/mfs/demo/file1.txt",
+    "storage_type": "MooseFS Chunk File (inside FAT32 image)",
+    "chunk_file_name": "chunk_0000000000000004_00000001.mfs",
+    "inode": 264,
+    "chunk_file_size_bytes": 65536,
+    "data_hiding_method": "Lower file slack manipulation"
+  },
+  "hidden_data_parameters": {
+    "hidden_string": "HIDDEN DATA",
+    "repeated_pattern": true,
+    "target_offset_bytes": 3203584,
+    "length_hidden_bytes": 60000,
+    "device_path": "/var/lib/moosefs/mfs_fat32.img",
+    "file_slack_type": "Lower file slack (unused area below upper file end)"
+  },
+  "integrity_modification": {
+    "crc32_checksum_hex": "d1c4ec31",
+    "checksum_location_bytes": 3198976,
+    "checksum_offset_hex": "0x1000",
+    "endianness": "Little-endian",
+    "written_bytes_order": [
+      "31",
+      "ec",
+      "c4",
+      "d1"
+    ]
+  },
+  "backup_and_forensic_info": {
+    "master_backup": {
+      "filename_pattern": "master_backup_YYYY-MM-DD.tar.gz",
+      "contents": [
+        "/etc/mfs",
+        "/var/lib/mfs"
+      ],
+      "description": "Contains MooseFS master metadata and configuration."
+    },
+    "chunk_image": {
+      "filename": "MooseFS_lower_FileSlack.img",
+      "filesystem_type": "FAT32",
+      "contains": "All physical chunk files including hidden data."
+    },
+    "reconstruction_notes": [
+      "Master metadata restores logical structure.",
+      "Chunk image restores physical binary content including hidden data."
+    ]
+  },
+  "recovery_summary": [
+    "Extract the master backup using tar.",
+    "Attach the FAT32 chunk image via losetup and mount it.",
+    "Restart MooseFS master and chunkserver services.",
+    "Hidden data remains intact inside the FAT32 image."
+  ],
+  "effectiveness_notes": [
+    "Hidden data reside in unused space within a physical chunk file.",
+    "Master metadata does not reference these bytes.",
+    "Logical operations cannot detect the modification.",
+    "Only forensic inspection of the FAT32 image reveals the hidden data."
+  ],
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 60000,
+    "segments_used": 1
+  }
+}
