@@ -1,0 +1,23 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data hidden in NTFS Alternate Data Streams (ADS). Each listed file contains an additional named stream storing the hidden payload.",
+  "image": "NTFS_ADS.img",
+  "filesystem": "NTFS",
+  "ads_entries": [
+    {
+      "filename": "file_011.txt",
+      "ads_stream": "secret.txt",
+      "payload": "HIDDEN DATA"
+    },
+    {
+      "filename": "file_052.txt",
+      "ads_stream": "secret2.txt",
+      "payload": "This is hidden data"
+    },
+    {
+      "filename": "file_099.txt",
+      "ads_stream": "secret3.txt",
+      "payload": "TOP Secret Data"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "NTFS_Add_Cluster.img",
+  "description": "Data hidden by appending an additional allocated cluster to a file and writing the payload into that cluster.",
+  "filesystem": "NTFS",
+  "target_file": "Documents/TextFiles/file_003.txt",
+  "added_cluster": {
+    "start_cluster": 54,
+    "clusters_count": 1,
+    "offset_bytes": 221184,
+    "offset_hex": "0x36000"
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 12,
+    "pattern": "HIDDEN DATA"
+  }
+}

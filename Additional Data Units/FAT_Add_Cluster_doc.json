@@ -1,0 +1,22 @@
+{
+  "description": "Data hidden by allocating one additional cluster to a FAT file and writing the payload into that newly allocated cluster (beyond the file’s previous last cluster).",
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "FAT_Add_Cluster.img",
+  "filesystem": "FAT",
+  "sector_size_bytes": 512,
+  "cluster_size_bytes": 4096,
+  "target_file": "file_001.txt",
+  "original_last_cluster": 93,
+
+  "added_cluster": {
+    "start_cluster": 261365,
+    "clusters_count": 1,
+    "offset_bytes": 1072656384
+    
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 12,
+    "pattern": "HIDDEN DATA",
+    "repeated": false
+  }
+}
