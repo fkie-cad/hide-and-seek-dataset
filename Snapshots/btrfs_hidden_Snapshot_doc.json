@@ -1,0 +1,48 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "This documentation describes a Btrfs data hiding experiment where hidden data persisted within a snapshot that was made invisible through the use of an invisible Unicode name (U+FEFF). After creating the snapshot, it was moved into a hidden system directory to conceal its existence, while preserving the original files containing hidden data.",
+  "image_name": "btrfs_hidden_Snapshot.img",
+  "filesystem": "btrfs",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Snapshots in Btrfs preserve previous file versions.",
+    "An invisible Unicode snapshot name (U+FEFF) prevents display in standard directory listings.",
+    "Relocating the snapshot into a hidden directory (.lib32) further conceals its presence.",
+    "Even after the source files are deleted or modified, hidden data remain stored within the snapshot structure."
+  ],
+  "environment": {
+    "filesystem": "btrfs",
+    "mount_point": "/mnt/btrfs_img",
+    "hidden_directory": ".lib32",
+    "snapshot_name_unicode": "U+FEFF (Zero Width No Break Space)",
+    "hidden_data_string": "HIDDEN DATA"
+  },
+  "procedure": [
+    "1. The file '/home/File.txt' contained hidden data within its contents.",
+    "2. Additional hidden data were appended at the end of 'Test.txt'.",
+    "3. A Btrfs snapshot was created using the invisible Unicode name (U+FEFF).",
+    "4. After snapshot creation, hidden data in the live filesystem were deleted from 'File.txt' and 'Test.txt'.",
+    "5. The snapshot was then moved into the hidden system directory '.lib32'.",
+    "6. The snapshot remains invisible in standard 'btrfs subvolume list' output."
+  ],
+  "verification": {
+    "visibility_check": "Hidden snapshot does not appear in 'btrfs subvolume list'.",
+    "physical_existence": "Snapshot physically exists in /mnt/btrfs_img/.lib32/",
+    "snapshot_retains_data": true,
+    "hidden_snapshot_access_path": "/mnt/btrfs_img/.lib32/$(printf '\\ufeff')"
+  },
+  "conclusion": "The experiment confirms that Btrfs snapshots can be used to persist hidden data after deletion in the live filesystem. This is achieved by combining snapshot immutability, hidden directory relocation, and invisible Unicode naming.",
+  "location_summary": {
+    "hidden_snapshot_path": "/mnt/btrfs_img/.lib32/[U+FEFF]",
+    "contains_files": [
+      "/home/File.txt (original version with hidden data)",
+      "/home/Test.txt (version with appended hidden data)"
+    ]
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "storage_method": "Persistent hidden snapshot",
+    "segments_used": 2,
+    "total_hidden_bytes_estimated": 22
+  }
+}

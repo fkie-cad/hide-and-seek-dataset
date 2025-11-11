@@ -1,0 +1,39 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "A ZFS snapshot was used to conceal a file containing the string 'HIDDEN DATA'. After creating the snapshot, the original file was deleted from the active filesystem, but remained recoverable within the snapshot. This technique exploits the persistent nature of ZFS snapshots, which preserve deleted data.",
+  "image_name": "ZFS_Snapshot.img",
+  "filesystem": "ZFS",
+  "plaintext_preview": "HIDDEN DATA",
+  "notes": [
+    "ZFS snapshots maintain versions of datasets at specific points in time.",
+    "Even after deletion, files remain accessible under the snapshot path until the snapshot is destroyed.",
+    "Detection requires enumeration of all snapshots and inspection of their contents.",
+    "zfs list -t snapshot ca be used to find Snapshots in Pool",
+    "zfs diff <snapshot> shows the differences between the snapshot and current file system version"
+  ],
+
+  "zfs_snapshot_info": {
+    "pool_name": "zpool1_image",
+    "vdev_guid": 6624523399561113767,
+    "dataset": "Filesystem1",
+    "hidden_file_path": "/Filesystem1/home/HIDDEN_FILE.txt",
+    "hidden_file_name": "HIDDEN_FILE.txt",
+    "hidden_file_content": "HIDDEN DATA",
+    "snapshot_recovery_path": "zpool1_image/Filesystem1/.zfs/snapshot/<snapshot_name>/home/HIDDEN_FILE.txt",
+    "procedure_summary": [
+      "Created 'HIDDEN_FILE.txt' within dataset 'Filesystem1'.",
+      "File contained the string 'HIDDEN DATA'.",
+      "Created a snapshot of the dataset 'Filesystem1'.",
+      "Deleted the original file from the active filesystem.",
+      "Verified that the snapshot retains the deleted file and data.",
+      "Confirmed snapshot belongs to VDEV with GUID 6624523399561113767."
+    ]
+  },
+  
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "storage_method": "Preserved within ZFS snapshot",
+    "file_count": 1,
+    "total_hidden_bytes_estimated": 11
+  }
+}
