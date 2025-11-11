@@ -1,0 +1,808 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data hidden in NTFS File Slack.",
+  "image_name": "NTFS_File_Slack.img",
+  "filesystem": "NTFS",
+  "cluster_size_bytes": 4096,
+  "file_info": [
+    {
+      "regular_files_count": 97,
+      "regular_files_total_size_bytes": 756425
+    }
+  ],
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 202000,
+    "segments_used": 97,
+    "bytes_per_segment_max": 4072
+  },
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Absolute offsets are byte positions from the start of the disk image.",
+    "Each entry shows inode (MFT reference for NTFS), filename, slack capacity, absolute offset, and bytes written.",
+    "Total hidden bytes equal the sum of bytes written across all listed files.",
+    "For NTFS, file slack resides at the tail of the last allocated cluster of each file."
+  ],
+  "file_slack_info": {
+    "entries_count": 97,
+    "hidden_data_bytes": 202000,
+    "entries": [
+      {
+        "inode": "81-128-2",
+        "filename": "abschlussbericht.pdf",
+        "slack_size_bytes": 114,
+        "offset_bytes": 201826190,
+        "bytes_written": 114,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "80-128-2",
+        "filename": "projektbericht.docx",
+        "slack_size_bytes": 168,
+        "offset_bytes": 185044824,
+        "bytes_written": 168,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "87-128-2",
+        "filename": "file_002.txt",
+        "slack_size_bytes": 2904,
+        "offset_bytes": 252118184,
+        "bytes_written": 2904,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "88-128-2",
+        "filename": "file_003.txt",
+        "slack_size_bytes": 1720,
+        "offset_bytes": 268900680,
+        "bytes_written": 1720,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "89-128-2",
+        "filename": "file_004.txt",
+        "slack_size_bytes": 3322,
+        "offset_bytes": 285676294,
+        "bytes_written": 3322,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "90-128-2",
+        "filename": "file_005.txt",
+        "slack_size_bytes": 1094,
+        "offset_bytes": 319228858,
+        "bytes_written": 1094,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "91-128-2",
+        "filename": "file_006.txt",
+        "slack_size_bytes": 1487,
+        "offset_bytes": 336005681,
+        "bytes_written": 1487,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "75-128-2",
+        "filename": "file_007.txt",
+        "slack_size_bytes": 2961,
+        "offset_bytes": 352781423,
+        "bytes_written": 2961,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "77-128-2",
+        "filename": "file_008.txt",
+        "slack_size_bytes": 1224,
+        "offset_bytes": 369560376,
+        "bytes_written": 1224,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "78-128-2",
+        "filename": "file_009.txt",
+        "slack_size_bytes": 292,
+        "offset_bytes": 386342620,
+        "bytes_written": 292,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "79-128-2",
+        "filename": "file_010.txt",
+        "slack_size_bytes": 2305,
+        "offset_bytes": 403113727,
+        "bytes_written": 2305,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "92-128-2",
+        "filename": "file_011.txt",
+        "slack_size_bytes": 1112,
+        "offset_bytes": 419896232,
+        "bytes_written": 1112,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "93-128-2",
+        "filename": "file_012.txt",
+        "slack_size_bytes": 2338,
+        "offset_bytes": 436676318,
+        "bytes_written": 2338,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "94-128-2",
+        "filename": "file_013.txt",
+        "slack_size_bytes": 2706,
+        "offset_bytes": 453449070,
+        "bytes_written": 2706,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "95-128-2",
+        "filename": "file_014.txt",
+        "slack_size_bytes": 2430,
+        "offset_bytes": 470230658,
+        "bytes_written": 2430,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "96-128-2",
+        "filename": "file_015.txt",
+        "slack_size_bytes": 2033,
+        "offset_bytes": 542242831,
+        "bytes_written": 2033,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "97-128-2",
+        "filename": "file_016.txt",
+        "slack_size_bytes": 1675,
+        "offset_bytes": 558991733,
+        "bytes_written": 1675,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "98-128-2",
+        "filename": "file_017.txt",
+        "slack_size_bytes": 3979,
+        "offset_bytes": 575770741,
+        "bytes_written": 3979,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "100-128-2",
+        "filename": "file_019.txt",
+        "slack_size_bytes": 396,
+        "offset_bytes": 609324660,
+        "bytes_written": 396,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "101-128-2",
+        "filename": "file_020.txt",
+        "slack_size_bytes": 2725,
+        "offset_bytes": 626099547,
+        "bytes_written": 2725,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "102-128-2",
+        "filename": "file_021.txt",
+        "slack_size_bytes": 2593,
+        "offset_bytes": 642880991,
+        "bytes_written": 2593,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "103-128-2",
+        "filename": "file_022.txt",
+        "slack_size_bytes": 1937,
+        "offset_bytes": 659658863,
+        "bytes_written": 1937,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "104-128-2",
+        "filename": "file_023.txt",
+        "slack_size_bytes": 3373,
+        "offset_bytes": 676430547,
+        "bytes_written": 3373,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "105-128-2",
+        "filename": "file_024.txt",
+        "slack_size_bytes": 3848,
+        "offset_bytes": 693215480,
+        "bytes_written": 3848,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "106-128-2",
+        "filename": "file_025.txt",
+        "slack_size_bytes": 2118,
+        "offset_bytes": 709990330,
+        "bytes_written": 2118,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "107-128-2",
+        "filename": "file_026.txt",
+        "slack_size_bytes": 1191,
+        "offset_bytes": 726768473,
+        "bytes_written": 1191,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "108-128-2",
+        "filename": "file_027.txt",
+        "slack_size_bytes": 429,
+        "offset_bytes": 743546451,
+        "bytes_written": 429,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "109-128-2",
+        "filename": "file_028.txt",
+        "slack_size_bytes": 3061,
+        "offset_bytes": 760321035,
+        "bytes_written": 3061,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "111-128-2",
+        "filename": "file_030.txt",
+        "slack_size_bytes": 2361,
+        "offset_bytes": 777098951,
+        "bytes_written": 2361,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "112-128-2",
+        "filename": "file_031.txt",
+        "slack_size_bytes": 2149,
+        "offset_bytes": 793876379,
+        "bytes_written": 2149,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "113-128-2",
+        "filename": "file_032.txt",
+        "slack_size_bytes": 313,
+        "offset_bytes": 810651335,
+        "bytes_written": 313,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "115-128-2",
+        "filename": "file_034.txt",
+        "slack_size_bytes": 637,
+        "offset_bytes": 827428227,
+        "bytes_written": 637,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "116-128-2",
+        "filename": "file_035.txt",
+        "slack_size_bytes": 1643,
+        "offset_bytes": 844204437,
+        "bytes_written": 1643,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "118-128-2",
+        "filename": "file_037.txt",
+        "slack_size_bytes": 3689,
+        "offset_bytes": 877765015,
+        "bytes_written": 3689,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "119-128-2",
+        "filename": "file_038.txt",
+        "slack_size_bytes": 3338,
+        "offset_bytes": 894534390,
+        "bytes_written": 3338,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "120-128-2",
+        "filename": "file_039.txt",
+        "slack_size_bytes": 1047,
+        "offset_bytes": 911313897,
+        "bytes_written": 1047,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "121-128-2",
+        "filename": "file_040.txt",
+        "slack_size_bytes": 171,
+        "offset_bytes": 928091989,
+        "bytes_written": 171,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "122-128-2",
+        "filename": "file_041.txt",
+        "slack_size_bytes": 2671,
+        "offset_bytes": 944870801,
+        "bytes_written": 2671,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "123-128-2",
+        "filename": "file_042.txt",
+        "slack_size_bytes": 3592,
+        "offset_bytes": 961651192,
+        "bytes_written": 3592,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "124-128-2",
+        "filename": "file_043.txt",
+        "slack_size_bytes": 677,
+        "offset_bytes": 978427227,
+        "bytes_written": 677,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "125-128-2",
+        "filename": "file_044.txt",
+        "slack_size_bytes": 3155,
+        "offset_bytes": 995197869,
+        "bytes_written": 3155,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "126-128-2",
+        "filename": "file_045.txt",
+        "slack_size_bytes": 3071,
+        "offset_bytes": 1011983361,
+        "bytes_written": 3071,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "128-128-2",
+        "filename": "file_047.txt",
+        "slack_size_bytes": 4072,
+        "offset_bytes": 1028759576,
+        "bytes_written": 4072,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "129-128-2",
+        "filename": "file_048.txt",
+        "slack_size_bytes": 2973,
+        "offset_bytes": 1045529699,
+        "bytes_written": 2973,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "130-128-2",
+        "filename": "file_049.txt",
+        "slack_size_bytes": 1674,
+        "offset_bytes": 1062312310,
+        "bytes_written": 1674,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "131-128-2",
+        "filename": "file_050.txt",
+        "slack_size_bytes": 1953,
+        "offset_bytes": 134682719,
+        "bytes_written": 1953,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "132-128-2",
+        "filename": "file_051.txt",
+        "slack_size_bytes": 3736,
+        "offset_bytes": 151462248,
+        "bytes_written": 3736,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "133-128-2",
+        "filename": "file_052.txt",
+        "slack_size_bytes": 519,
+        "offset_bytes": 168234489,
+        "bytes_written": 519,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "134-128-2",
+        "filename": "file_053.txt",
+        "slack_size_bytes": 3681,
+        "offset_bytes": 252129695,
+        "bytes_written": 3681,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "136-128-2",
+        "filename": "file_055.txt",
+        "slack_size_bytes": 2966,
+        "offset_bytes": 319231082,
+        "bytes_written": 2966,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "137-128-2",
+        "filename": "file_056.txt",
+        "slack_size_bytes": 3549,
+        "offset_bytes": 336015907,
+        "bytes_written": 3549,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "138-128-2",
+        "filename": "file_057.txt",
+        "slack_size_bytes": 2099,
+        "offset_bytes": 352790477,
+        "bytes_written": 2099,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "139-128-2",
+        "filename": "file_058.txt",
+        "slack_size_bytes": 2485,
+        "offset_bytes": 470242891,
+        "bytes_written": 2485,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "140-128-2",
+        "filename": "file_059.txt",
+        "slack_size_bytes": 2815,
+        "offset_bytes": 487007489,
+        "bytes_written": 2815,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "141-128-2",
+        "filename": "file_060.txt",
+        "slack_size_bytes": 2393,
+        "offset_bytes": 503781031,
+        "bytes_written": 2393,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "142-128-2",
+        "filename": "file_061.txt",
+        "slack_size_bytes": 3390,
+        "offset_bytes": 559002306,
+        "bytes_written": 3390,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "143-128-2",
+        "filename": "file_062.txt",
+        "slack_size_bytes": 1415,
+        "offset_bytes": 609331833,
+        "bytes_written": 1415,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "144-128-2",
+        "filename": "file_063.txt",
+        "slack_size_bytes": 145,
+        "offset_bytes": 626106223,
+        "bytes_written": 145,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "145-128-2",
+        "filename": "file_064.txt",
+        "slack_size_bytes": 2494,
+        "offset_bytes": 676435522,
+        "bytes_written": 2494,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "146-128-2",
+        "filename": "file_065.txt",
+        "slack_size_bytes": 999,
+        "offset_bytes": 810654745,
+        "bytes_written": 999,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "147-128-2",
+        "filename": "file_066.txt",
+        "slack_size_bytes": 690,
+        "offset_bytes": 827432270,
+        "bytes_written": 690,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "148-128-2",
+        "filename": "file_067.txt",
+        "slack_size_bytes": 36,
+        "offset_bytes": 844210140,
+        "bytes_written": 36,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "150-128-2",
+        "filename": "file_069.txt",
+        "slack_size_bytes": 1315,
+        "offset_bytes": 860986077,
+        "bytes_written": 1315,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "151-128-2",
+        "filename": "file_070.txt",
+        "slack_size_bytes": 175,
+        "offset_bytes": 894545745,
+        "bytes_written": 175,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "152-128-2",
+        "filename": "file_071.txt",
+        "slack_size_bytes": 824,
+        "offset_bytes": 911318216,
+        "bytes_written": 824,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "99-128-2",
+        "filename": "file_018.txt",
+        "slack_size_bytes": 3913,
+        "offset_bytes": 592552119,
+        "bytes_written": 3913,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "117-128-2",
+        "filename": "file_036.txt",
+        "slack_size_bytes": 656,
+        "offset_bytes": 860982640,
+        "bytes_written": 656,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "153-128-2",
+        "filename": "file_072.txt",
+        "slack_size_bytes": 3187,
+        "offset_bytes": 928101261,
+        "bytes_written": 3187,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "154-128-2",
+        "filename": "file_073.txt",
+        "slack_size_bytes": 4055,
+        "offset_bytes": 995209257,
+        "bytes_written": 4055,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "155-128-2",
+        "filename": "file_074.txt",
+        "slack_size_bytes": 3356,
+        "offset_bytes": 1045533412,
+        "bytes_written": 3356,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "156-128-2",
+        "filename": "file_075.txt",
+        "slack_size_bytes": 2338,
+        "offset_bytes": 1062319838,
+        "bytes_written": 2338,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "158-128-2",
+        "filename": "file_077.txt",
+        "slack_size_bytes": 932,
+        "offset_bytes": 168242268,
+        "bytes_written": 932,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "159-128-2",
+        "filename": "file_078.txt",
+        "slack_size_bytes": 4045,
+        "offset_bytes": 268906547,
+        "bytes_written": 4045,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "160-128-2",
+        "filename": "file_079.txt",
+        "slack_size_bytes": 1647,
+        "offset_bytes": 369564049,
+        "bytes_written": 1647,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "161-128-2",
+        "filename": "file_080.txt",
+        "slack_size_bytes": 1288,
+        "offset_bytes": 403118840,
+        "bytes_written": 1288,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "162-128-2",
+        "filename": "file_081.txt",
+        "slack_size_bytes": 3510,
+        "offset_bytes": 503788106,
+        "bytes_written": 3510,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "163-128-2",
+        "filename": "file_082.txt",
+        "slack_size_bytes": 432,
+        "offset_bytes": 575782480,
+        "bytes_written": 432,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "164-128-2",
+        "filename": "file_083.txt",
+        "slack_size_bytes": 3406,
+        "offset_bytes": 626111154,
+        "bytes_written": 3406,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "165-128-2",
+        "filename": "file_084.txt",
+        "slack_size_bytes": 658,
+        "offset_bytes": 642887022,
+        "bytes_written": 658,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "166-128-2",
+        "filename": "file_085.txt",
+        "slack_size_bytes": 280,
+        "offset_bytes": 659668712,
+        "bytes_written": 280,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "167-128-2",
+        "filename": "file_086.txt",
+        "slack_size_bytes": 2177,
+        "offset_bytes": 676444031,
+        "bytes_written": 2177,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "168-128-2",
+        "filename": "file_087.txt",
+        "slack_size_bytes": 1648,
+        "offset_bytes": 709998992,
+        "bytes_written": 1648,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "169-128-2",
+        "filename": "file_088.txt",
+        "slack_size_bytes": 500,
+        "offset_bytes": 726777356,
+        "bytes_written": 500,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "170-128-2",
+        "filename": "file_089.txt",
+        "slack_size_bytes": 1504,
+        "offset_bytes": 743553568,
+        "bytes_written": 1504,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "171-128-2",
+        "filename": "file_090.txt",
+        "slack_size_bytes": 2263,
+        "offset_bytes": 760325929,
+        "bytes_written": 2263,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "172-128-2",
+        "filename": "file_091.txt",
+        "slack_size_bytes": 2498,
+        "offset_bytes": 777107006,
+        "bytes_written": 2498,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "173-128-2",
+        "filename": "file_092.txt",
+        "slack_size_bytes": 3469,
+        "offset_bytes": 793887347,
+        "bytes_written": 3469,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "174-128-2",
+        "filename": "file_093.txt",
+        "slack_size_bytes": 2734,
+        "offset_bytes": 810665298,
+        "bytes_written": 2734,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "175-128-2",
+        "filename": "file_094.txt",
+        "slack_size_bytes": 162,
+        "offset_bytes": 827440990,
+        "bytes_written": 162,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "176-128-2",
+        "filename": "file_095.txt",
+        "slack_size_bytes": 3284,
+        "offset_bytes": 844219180,
+        "bytes_written": 3284,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "177-128-2",
+        "filename": "file_096.txt",
+        "slack_size_bytes": 3075,
+        "offset_bytes": 860992509,
+        "bytes_written": 3075,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "178-128-2",
+        "filename": "file_097.txt",
+        "slack_size_bytes": 3188,
+        "offset_bytes": 911319948,
+        "bytes_written": 3188,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "179-128-2",
+        "filename": "file_098.txt",
+        "slack_size_bytes": 1439,
+        "offset_bytes": 944876129,
+        "bytes_written": 1439,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "180-128-2",
+        "filename": "file_099.txt",
+        "slack_size_bytes": 2563,
+        "offset_bytes": 978433533,
+        "bytes_written": 2563,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "83-128-2",
+        "filename": "beep.wav",
+        "slack_size_bytes": 3746,
+        "offset_bytes": 218739038,
+        "bytes_written": 3746,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "74-128-2",
+        "filename": "sample1.jpg",
+        "slack_size_bytes": 3341,
+        "offset_bytes": 134677235,
+        "bytes_written": 3341,
+        "data_pattern": "HIDDEN DATA"
+      },
+      {
+        "inode": "84-128-2",
+        "filename": "demo.mp4",
+        "slack_size_bytes": 259,
+        "offset_bytes": 235351766,
+        "bytes_written": 298,
+        "data_pattern": "HIDDEN DATA"
+      }
+    ]
+  }
+}

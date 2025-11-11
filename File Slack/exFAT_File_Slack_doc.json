@@ -1,0 +1,910 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were written into the unused slack space of allocated file clusters in an exFAT filesystem image. Visible file contents remained unchanged while the unused tail region of each cluster was filled with repeated 'HIDDEN MESSAGE' patterns. The payload is distributed across many regular files without altering their logical sizes.",
+  "image_name": "exfat_File_Slack.img",
+  "filesystem": "exFAT",
+  "cluster_size_bytes": 32768,
+  "file_info": [
+    {
+      "regular_files_count": 110,
+      "regular_files_total_size_bytes": 741536
+    }
+  ],
+  "payload_summary": {
+    "data_pattern": "HIDDEN MESSAGE",
+    "total_bytes": 3092320,
+    "segments_used": 110,
+    "bytes_per_segment_max": 32768
+  },
+  "plaintext_preview": "HIDDEN MESSAGE HIDDEN MESSAGE HIDDEN MESSAGE ...",
+  "notes": [
+    "The total hidden bytes equal the sum of bytes written across all listed files.",
+    "Detection requires slack-space parsing because file contents and allocation tables remain unchanged."
+  ],
+  "file_slack_info": {
+    "entries_count": 110,
+    "hidden_data_bytes": 3092320,
+    "entries": [
+      {
+        "inode": 4099,
+        "filename": "meeting_notes.txt",
+        "slack_size_bytes": 32744,
+        "slack_offset_bytes": 2424856,
+        "bytes_written": 32744,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 3078,
+        "filename": "projektbericht.docx",
+        "slack_size_bytes": 28840,
+        "slack_offset_bytes": 2789208,
+        "bytes_written": 28840,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 3082,
+        "filename": "abschlussbericht.pdf",
+        "slack_size_bytes": 24690,
+        "slack_offset_bytes": 2858894,
+        "bytes_written": 24690,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32771,
+        "filename": "file_001.txt",
+        "slack_size_bytes": 30294,
+        "slack_offset_bytes": 3180970,
+        "bytes_written": 30294,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32774,
+        "filename": "file_002.txt",
+        "slack_size_bytes": 29613,
+        "slack_offset_bytes": 3214419,
+        "bytes_written": 29613,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32777,
+        "filename": "file_003.txt",
+        "slack_size_bytes": 23753,
+        "slack_offset_bytes": 3253047,
+        "bytes_written": 23753,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32780,
+        "filename": "file_004.txt",
+        "slack_size_bytes": 27644,
+        "slack_offset_bytes": 3281924,
+        "bytes_written": 27644,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32783,
+        "filename": "file_005.txt",
+        "slack_size_bytes": 25039,
+        "slack_offset_bytes": 3317297,
+        "bytes_written": 25039,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32786,
+        "filename": "file_006.txt",
+        "slack_size_bytes": 24508,
+        "slack_offset_bytes": 3350596,
+        "bytes_written": 24508,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32789,
+        "filename": "file_007.txt",
+        "slack_size_bytes": 28962,
+        "slack_offset_bytes": 3378910,
+        "bytes_written": 28962,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32792,
+        "filename": "file_008.txt",
+        "slack_size_bytes": 27378,
+        "slack_offset_bytes": 3413262,
+        "bytes_written": 27378,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32795,
+        "filename": "file_009.txt",
+        "slack_size_bytes": 25222,
+        "slack_offset_bytes": 3448186,
+        "bytes_written": 25222,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32798,
+        "filename": "file_010.txt",
+        "slack_size_bytes": 26322,
+        "slack_offset_bytes": 3479854,
+        "bytes_written": 26322,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32801,
+        "filename": "file_011.txt",
+        "slack_size_bytes": 31945,
+        "slack_offset_bytes": 3506999,
+        "bytes_written": 31945,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32804,
+        "filename": "file_012.txt",
+        "slack_size_bytes": 30386,
+        "slack_offset_bytes": 3541326,
+        "bytes_written": 30386,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32807,
+        "filename": "file_013.txt",
+        "slack_size_bytes": 32054,
+        "slack_offset_bytes": 3572426,
+        "bytes_written": 32054,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32810,
+        "filename": "file_014.txt",
+        "slack_size_bytes": 29982,
+        "slack_offset_bytes": 3607266,
+        "bytes_written": 29982,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32813,
+        "filename": "file_015.txt",
+        "slack_size_bytes": 28280,
+        "slack_offset_bytes": 3641736,
+        "bytes_written": 28280,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32816,
+        "filename": "file_016.txt",
+        "slack_size_bytes": 30876,
+        "slack_offset_bytes": 3671908,
+        "bytes_written": 30876,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32819,
+        "filename": "file_017.txt",
+        "slack_size_bytes": 22782,
+        "slack_offset_bytes": 3712770,
+        "bytes_written": 22782,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32822,
+        "filename": "file_018.txt",
+        "slack_size_bytes": 25403,
+        "slack_offset_bytes": 3742917,
+        "bytes_written": 25403,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32825,
+        "filename": "file_019.txt",
+        "slack_size_bytes": 29869,
+        "slack_offset_bytes": 3771219,
+        "bytes_written": 29869,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32828,
+        "filename": "file_020.txt",
+        "slack_size_bytes": 30254,
+        "slack_offset_bytes": 3803602,
+        "bytes_written": 30254,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32831,
+        "filename": "file_021.txt",
+        "slack_size_bytes": 23169,
+        "slack_offset_bytes": 3843455,
+        "bytes_written": 23169,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32834,
+        "filename": "file_022.txt",
+        "slack_size_bytes": 23299,
+        "slack_offset_bytes": 3876093,
+        "bytes_written": 23299,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32837,
+        "filename": "file_023.txt",
+        "slack_size_bytes": 29854,
+        "slack_offset_bytes": 3902306,
+        "bytes_written": 29854,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32840,
+        "filename": "file_024.txt",
+        "slack_size_bytes": 32634,
+        "slack_offset_bytes": 3932294,
+        "bytes_written": 32634,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32843,
+        "filename": "file_025.txt",
+        "slack_size_bytes": 23894,
+        "slack_offset_bytes": 3973802,
+        "bytes_written": 23894,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32846,
+        "filename": "file_026.txt",
+        "slack_size_bytes": 31756,
+        "slack_offset_bytes": 3998708,
+        "bytes_written": 31756,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32849,
+        "filename": "file_027.txt",
+        "slack_size_bytes": 28693,
+        "slack_offset_bytes": 4034539,
+        "bytes_written": 28693,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32852,
+        "filename": "file_028.txt",
+        "slack_size_bytes": 22911,
+        "slack_offset_bytes": 4073089,
+        "bytes_written": 22911,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32855,
+        "filename": "file_029.txt",
+        "slack_size_bytes": 28123,
+        "slack_offset_bytes": 4100645,
+        "bytes_written": 28123,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32858,
+        "filename": "file_030.txt",
+        "slack_size_bytes": 30079,
+        "slack_offset_bytes": 4131457,
+        "bytes_written": 30079,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32861,
+        "filename": "file_031.txt",
+        "slack_size_bytes": 28108,
+        "slack_offset_bytes": 4166196,
+        "bytes_written": 28108,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32864,
+        "filename": "file_032.txt",
+        "slack_size_bytes": 27369,
+        "slack_offset_bytes": 4199703,
+        "bytes_written": 27369,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32867,
+        "filename": "file_033.txt",
+        "slack_size_bytes": 27672,
+        "slack_offset_bytes": 4232168,
+        "bytes_written": 27672,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32870,
+        "filename": "file_034.txt",
+        "slack_size_bytes": 23473,
+        "slack_offset_bytes": 4269135,
+        "bytes_written": 23473,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32873,
+        "filename": "file_035.txt",
+        "slack_size_bytes": 26012,
+        "slack_offset_bytes": 4299364,
+        "bytes_written": 26012,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32876,
+        "filename": "file_036.txt",
+        "slack_size_bytes": 23082,
+        "slack_offset_bytes": 4335062,
+        "bytes_written": 23082,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32879,
+        "filename": "file_037.txt",
+        "slack_size_bytes": 31610,
+        "slack_offset_bytes": 4359302,
+        "bytes_written": 31610,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32882,
+        "filename": "file_038.txt",
+        "slack_size_bytes": 24327,
+        "slack_offset_bytes": 4399353,
+        "bytes_written": 24327,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32885,
+        "filename": "file_039.txt",
+        "slack_size_bytes": 31681,
+        "slack_offset_bytes": 4424767,
+        "bytes_written": 31681,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32888,
+        "filename": "file_040.txt",
+        "slack_size_bytes": 25104,
+        "slack_offset_bytes": 4464112,
+        "bytes_written": 25104,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32891,
+        "filename": "file_041.txt",
+        "slack_size_bytes": 32133,
+        "slack_offset_bytes": 4489851,
+        "bytes_written": 32133,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32894,
+        "filename": "file_042.txt",
+        "slack_size_bytes": 25516,
+        "slack_offset_bytes": 4529236,
+        "bytes_written": 25516,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32897,
+        "filename": "file_043.txt",
+        "slack_size_bytes": 23106,
+        "slack_offset_bytes": 4564414,
+        "bytes_written": 23106,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32900,
+        "filename": "file_044.txt",
+        "slack_size_bytes": 24126,
+        "slack_offset_bytes": 4596162,
+        "bytes_written": 24126,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32903,
+        "filename": "file_045.txt",
+        "slack_size_bytes": 25900,
+        "slack_offset_bytes": 4627156,
+        "bytes_written": 25900,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32906,
+        "filename": "file_046.txt",
+        "slack_size_bytes": 29873,
+        "slack_offset_bytes": 4655951,
+        "bytes_written": 29873,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32909,
+        "filename": "file_047.txt",
+        "slack_size_bytes": 25379,
+        "slack_offset_bytes": 4693213,
+        "bytes_written": 25379,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32912,
+        "filename": "file_048.txt",
+        "slack_size_bytes": 30000,
+        "slack_offset_bytes": 4721360,
+        "bytes_written": 30000,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32915,
+        "filename": "file_049.txt",
+        "slack_size_bytes": 24497,
+        "slack_offset_bytes": 4759631,
+        "bytes_written": 24497,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32918,
+        "filename": "file_050.txt",
+        "slack_size_bytes": 25281,
+        "slack_offset_bytes": 4791615,
+        "bytes_written": 25281,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32921,
+        "filename": "file_051.txt",
+        "slack_size_bytes": 26978,
+        "slack_offset_bytes": 4822686,
+        "bytes_written": 26978,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32924,
+        "filename": "file_052.txt",
+        "slack_size_bytes": 26576,
+        "slack_offset_bytes": 4855856,
+        "bytes_written": 26576,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32927,
+        "filename": "file_053.txt",
+        "slack_size_bytes": 30637,
+        "slack_offset_bytes": 4884563,
+        "bytes_written": 30637,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32930,
+        "filename": "file_054.txt",
+        "slack_size_bytes": 27236,
+        "slack_offset_bytes": 4920732,
+        "bytes_written": 27236,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32933,
+        "filename": "file_055.txt",
+        "slack_size_bytes": 27874,
+        "slack_offset_bytes": 4952862,
+        "bytes_written": 27874,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32936,
+        "filename": "file_056.txt",
+        "slack_size_bytes": 29929,
+        "slack_offset_bytes": 4983575,
+        "bytes_written": 29929,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32939,
+        "filename": "file_057.txt",
+        "slack_size_bytes": 28310,
+        "slack_offset_bytes": 5017962,
+        "bytes_written": 28310,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32942,
+        "filename": "file_058.txt",
+        "slack_size_bytes": 24438,
+        "slack_offset_bytes": 5054602,
+        "bytes_written": 24438,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32945,
+        "filename": "file_059.txt",
+        "slack_size_bytes": 29859,
+        "slack_offset_bytes": 5081949,
+        "bytes_written": 29859,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32948,
+        "filename": "file_060.txt",
+        "slack_size_bytes": 32492,
+        "slack_offset_bytes": 5112084,
+        "bytes_written": 32492,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32951,
+        "filename": "file_061.txt",
+        "slack_size_bytes": 29381,
+        "slack_offset_bytes": 5147963,
+        "bytes_written": 29381,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32954,
+        "filename": "file_062.txt",
+        "slack_size_bytes": 28731,
+        "slack_offset_bytes": 5181381,
+        "bytes_written": 28731,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32957,
+        "filename": "file_063.txt",
+        "slack_size_bytes": 26742,
+        "slack_offset_bytes": 5216138,
+        "bytes_written": 26742,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32960,
+        "filename": "file_064.txt",
+        "slack_size_bytes": 25914,
+        "slack_offset_bytes": 5249734,
+        "bytes_written": 25914,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32963,
+        "filename": "file_065.txt",
+        "slack_size_bytes": 30888,
+        "slack_offset_bytes": 5277528,
+        "bytes_written": 30888,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32966,
+        "filename": "file_066.txt",
+        "slack_size_bytes": 23041,
+        "slack_offset_bytes": 5318143,
+        "bytes_written": 23041,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32969,
+        "filename": "file_067.txt",
+        "slack_size_bytes": 30692,
+        "slack_offset_bytes": 5343260,
+        "bytes_written": 30692,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32972,
+        "filename": "file_068.txt",
+        "slack_size_bytes": 31371,
+        "slack_offset_bytes": 5375349,
+        "bytes_written": 31371,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32975,
+        "filename": "file_069.txt",
+        "slack_size_bytes": 32327,
+        "slack_offset_bytes": 5407161,
+        "bytes_written": 32327,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32978,
+        "filename": "file_070.txt",
+        "slack_size_bytes": 29398,
+        "slack_offset_bytes": 5442858,
+        "bytes_written": 29398,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32981,
+        "filename": "file_071.txt",
+        "slack_size_bytes": 32279,
+        "slack_offset_bytes": 5472745,
+        "bytes_written": 32279,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32984,
+        "filename": "file_072.txt",
+        "slack_size_bytes": 30044,
+        "slack_offset_bytes": 5507748,
+        "bytes_written": 30044,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32987,
+        "filename": "file_073.txt",
+        "slack_size_bytes": 25206,
+        "slack_offset_bytes": 5545354,
+        "bytes_written": 25206,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32990,
+        "filename": "file_074.txt",
+        "slack_size_bytes": 30553,
+        "slack_offset_bytes": 5572775,
+        "bytes_written": 30553,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32993,
+        "filename": "file_075.txt",
+        "slack_size_bytes": 30884,
+        "slack_offset_bytes": 5605212,
+        "bytes_written": 30884,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32996,
+        "filename": "file_076.txt",
+        "slack_size_bytes": 29141,
+        "slack_offset_bytes": 5639723,
+        "bytes_written": 29141,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 32999,
+        "filename": "file_077.txt",
+        "slack_size_bytes": 28392,
+        "slack_offset_bytes": 5673240,
+        "bytes_written": 28392,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33002,
+        "filename": "file_078.txt",
+        "slack_size_bytes": 31533,
+        "slack_offset_bytes": 5702867,
+        "bytes_written": 31533,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33005,
+        "filename": "file_079.txt",
+        "slack_size_bytes": 30037,
+        "slack_offset_bytes": 5737131,
+        "bytes_written": 30037,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33008,
+        "filename": "file_080.txt",
+        "slack_size_bytes": 23241,
+        "slack_offset_bytes": 5776695,
+        "bytes_written": 23241,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33011,
+        "filename": "file_081.txt",
+        "slack_size_bytes": 31301,
+        "slack_offset_bytes": 5801403,
+        "bytes_written": 31301,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33014,
+        "filename": "file_082.txt",
+        "slack_size_bytes": 27135,
+        "slack_offset_bytes": 5838337,
+        "bytes_written": 27135,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33017,
+        "filename": "file_083.txt",
+        "slack_size_bytes": 32335,
+        "slack_offset_bytes": 5865905,
+        "bytes_written": 32335,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33020,
+        "filename": "file_084.txt",
+        "slack_size_bytes": 25444,
+        "slack_offset_bytes": 5905564,
+        "bytes_written": 25444,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33023,
+        "filename": "file_085.txt",
+        "slack_size_bytes": 30704,
+        "slack_offset_bytes": 5933072,
+        "bytes_written": 30704,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33026,
+        "filename": "file_086.txt",
+        "slack_size_bytes": 30844,
+        "slack_offset_bytes": 5965700,
+        "bytes_written": 30844,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33029,
+        "filename": "file_087.txt",
+        "slack_size_bytes": 31331,
+        "slack_offset_bytes": 5997981,
+        "bytes_written": 31331,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33032,
+        "filename": "file_088.txt",
+        "slack_size_bytes": 29336,
+        "slack_offset_bytes": 6032744,
+        "bytes_written": 29336,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33035,
+        "filename": "file_089.txt",
+        "slack_size_bytes": 26893,
+        "slack_offset_bytes": 6067955,
+        "bytes_written": 26893,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33038,
+        "filename": "file_090.txt",
+        "slack_size_bytes": 31335,
+        "slack_offset_bytes": 6096281,
+        "bytes_written": 31335,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33041,
+        "filename": "file_091.txt",
+        "slack_size_bytes": 25609,
+        "slack_offset_bytes": 6134775,
+        "bytes_written": 25609,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33044,
+        "filename": "file_092.txt",
+        "slack_size_bytes": 27967,
+        "slack_offset_bytes": 6165185,
+        "bytes_written": 27967,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33047,
+        "filename": "file_093.txt",
+        "slack_size_bytes": 29086,
+        "slack_offset_bytes": 6196834,
+        "bytes_written": 29086,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33050,
+        "filename": "file_094.txt",
+        "slack_size_bytes": 25023,
+        "slack_offset_bytes": 6233665,
+        "bytes_written": 25023,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33053,
+        "filename": "file_095.txt",
+        "slack_size_bytes": 24833,
+        "slack_offset_bytes": 6266623,
+        "bytes_written": 24833,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33056,
+        "filename": "file_096.txt",
+        "slack_size_bytes": 30928,
+        "slack_offset_bytes": 6293296,
+        "bytes_written": 30928,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33059,
+        "filename": "file_097.txt",
+        "slack_size_bytes": 27956,
+        "slack_offset_bytes": 6329036,
+        "bytes_written": 27956,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33062,
+        "filename": "file_098.txt",
+        "slack_size_bytes": 23667,
+        "slack_offset_bytes": 6366093,
+        "bytes_written": 23667,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33065,
+        "filename": "file_099.txt",
+        "slack_size_bytes": 29228,
+        "slack_offset_bytes": 6393300,
+        "bytes_written": 29228,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 33068,
+        "filename": "file_100.txt",
+        "slack_size_bytes": 28356,
+        "slack_offset_bytes": 6426940,
+        "bytes_written": 28356,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 6147,
+        "filename": "sample1.jpg",
+        "slack_size_bytes": 32013,
+        "slack_offset_bytes": 2523891,
+        "bytes_written": 32013,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 6150,
+        "filename": "sample_small.png",
+        "slack_size_bytes": 32481,
+        "slack_offset_bytes": 2883871,
+        "bytes_written": 32481,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 7171,
+        "filename": "demo.mp4",
+        "slack_size_bytes": 20778,
+        "slack_offset_bytes": 3124950,
+        "bytes_written": 20778,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 8195,
+        "filename": "beep.wav",
+        "slack_size_bytes": 20130,
+        "slack_offset_bytes": 3092830,
+        "bytes_written": 20130,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 9219,
+        "filename": "hello.sh",
+        "slack_size_bytes": 32739,
+        "slack_offset_bytes": 2457629,
+        "bytes_written": 32739,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 9222,
+        "filename": "hello.py",
+        "slack_size_bytes": 32746,
+        "slack_offset_bytes": 2490390,
+        "bytes_written": 32746,
+        "data_pattern": "HIDDEN MESSAGE"
+      },
+      {
+        "inode": 9229,
+        "filename": "doc_creater.py",
+        "slack_size_bytes": 32497,
+        "slack_offset_bytes": 2720015,
+        "bytes_written": 32497,
+        "data_pattern": "HIDDEN MESSAGE"
+      }
+    ]
+  }
+}
