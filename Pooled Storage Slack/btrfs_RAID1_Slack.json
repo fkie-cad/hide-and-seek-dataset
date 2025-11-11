@@ -1,0 +1,50 @@
+{   "dataset_title": "Hidden Data in Filesystems",
+    "description": "This method hides data in the unallocated space of a Btrfs RAID1 filesystem by writing data directly to the unused areas of the larger device (in this case, btrfs_dev2). The hidden data is written outside the filesystem's management, in areas that are not mirrored or tracked by the RAID1 configuration. The data is typically hidden in the last portion of the larger device, which remains unallocated after the filesystem is created and mounted.",
+    
+    "images":{
+        "image1": "btrfs_RAID1_Slack/btrfs_dev1.img",
+        "image2": "btrfs_RAID1_Slack/btrfs_dev2.img" 
+
+    },
+
+    "notes": {
+        "note_1":"Dev2 mirrores data from dev1. This leaves 250 Mib of unused space on dev2 which can be used to hide data",
+        "note_2":"A 50 Mib txt file is hidden in th last 50 Mib of dev2. This file is not referenced by the btrfs file system.",
+        "note_3": "It is important to note that while the data is hidden from the filesystem, it is still physically present on the disk and can be recovered using tools like dd and forensic analysis techniques.",
+        "device_sizes": {
+            "btrfs_dev1": "500 MiB",
+            "btrfs_dev2": "750 MiB"
+        }
+    },
+
+    "hidden_data_details": {
+        "hidden_data_type": "Text",
+        "hidden_data_string": "HIDDEN DATA",
+        "hidden_data_size": "50 MiB",
+        "hidden_data_location": "The unallocated portion of btrfs_dev2",
+        "offset_start": 734003200,
+        "offset_end": 739118592,
+        "method_of_hiding": "Data is written directly to the unallocated space using dd, bypassing the Btrfs filesystem. The data is placed in the last 50 MiB of the larger device (btrfs_dev2), after the filesystem's allocated space."
+    },
+    "reconstruction_instructions": {
+        "steps_to_reconstruct": [
+            {
+                "step": "1",
+                "description": "Use`sudo losetup -fP ~/btrfs_dev1.img` and `sudo losetup -fP ~/btrfs_dev2.img` to create loop devices."
+            },
+             {
+                "step": "2",
+                "description": "Use`losetup -a` to look up the loop numbers."
+            },
+            {
+                "step": "3",
+                "description": "To access the filesystem, mount the loop device using the command: `sudo mount -o degraded /dev/loopX /mnt/btrfs` (X : loop number of btrfs_dev1.img). This allows you to access the filesystem and automaticaly integrades btrfs_dev2.img ."
+            },
+            {
+                "step": "4",
+                "description": " To extract the hidden data, use dd to read from the offset where the data was written: `sudo dd if=/dev/loopY bs=1 skip=734003200 count=5242880 | hexdump -C`  (Y = loop number of btrfs_dev2)."
+            }
+        ]
+    }
+  
+}
