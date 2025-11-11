@@ -1,0 +1,619 @@
+{
+  "description": "Data hidden in ext4 inode timestamp nano second fields by writing short payload bytes into extra_timestamp fields across multiple inodes.",
+  "notes": "The first bit of every xtime_extra fiels remains unused.",
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "ext4_Timestamps.img",
+  "filesystem": "ext4",  
+   
+  "Inode_nano_timestamps_offset":{ 
+    "ctime_extra_offset": "0x84",
+    "mtime_extra_offset": "0x88",
+    "atime_extra_offset": "0x8C",
+    "crtime_extra_offset": "0x94"
+  },
+  
+  "payload_summary": {
+    "hidden_data_size_bytes_total": 1780,
+    "pattern": "HIDDEN DATA",
+    "repeated": true,
+    "plain_text_preview_truncated": "HIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DAT..."
+  },
+
+  "entries": [
+    {
+      "inode": 11,
+      "offset_bytes": 334336,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 12,
+      "offset_bytes": 334592,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 13,
+      "offset_bytes": 334848,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 17,
+      "offset_bytes": 335872,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 25,
+      "offset_bytes": 337920,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 26,
+      "offset_bytes": 338176,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 27,
+      "offset_bytes": 338432,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 28,
+      "offset_bytes": 338688,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 29,
+      "offset_bytes": 338944,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 30,
+      "offset_bytes": 339200,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 31,
+      "offset_bytes": 339456,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 32,
+      "offset_bytes": 339712,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 33,
+      "offset_bytes": 339968,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 34,
+      "offset_bytes": 340224,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 35,
+      "offset_bytes": 340480,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 36,
+      "offset_bytes": 340736,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 37,
+      "offset_bytes": 340992,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 38,
+      "offset_bytes": 341248,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 39,
+      "offset_bytes": 341504,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 40,
+      "offset_bytes": 341760,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 41,
+      "offset_bytes": 342016,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 42,
+      "offset_bytes": 342272,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 43,
+      "offset_bytes": 342528,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 44,
+      "offset_bytes": 342784,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 45,
+      "offset_bytes": 343040,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 46,
+      "offset_bytes": 343296,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 47,
+      "offset_bytes": 343552,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 48,
+      "offset_bytes": 343808,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 49,
+      "offset_bytes": 344064,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 50,
+      "offset_bytes": 344320,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 51,
+      "offset_bytes": 344576,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 52,
+      "offset_bytes": 344832,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 53,
+      "offset_bytes": 345088,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 54,
+      "offset_bytes": 345344,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 55,
+      "offset_bytes": 345600,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 56,
+      "offset_bytes": 345856,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 57,
+      "offset_bytes": 346112,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 58,
+      "offset_bytes": 346368,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 59,
+      "offset_bytes": 346624,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 60,
+      "offset_bytes": 346880,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 61,
+      "offset_bytes": 347136,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 62,
+      "offset_bytes": 347392,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 63,
+      "offset_bytes": 347648,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 64,
+      "offset_bytes": 347904,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 65,
+      "offset_bytes": 348160,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 66,
+      "offset_bytes": 348416,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 67,
+      "offset_bytes": 348672,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 68,
+      "offset_bytes": 348928,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 69,
+      "offset_bytes": 349184,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 70,
+      "offset_bytes": 349440,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 71,
+      "offset_bytes": 349696,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 72,
+      "offset_bytes": 349952,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 73,
+      "offset_bytes": 350208,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 74,
+      "offset_bytes": 350464,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 75,
+      "offset_bytes": 350720,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 76,
+      "offset_bytes": 350976,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 77,
+      "offset_bytes": 351232,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 78,
+      "offset_bytes": 351488,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 79,
+      "offset_bytes": 351744,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 80,
+      "offset_bytes": 352000,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 81,
+      "offset_bytes": 352256,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 82,
+      "offset_bytes": 352512,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 83,
+      "offset_bytes": 352768,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 84,
+      "offset_bytes": 353024,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 85,
+      "offset_bytes": 353280,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 86,
+      "offset_bytes": 353536,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 87,
+      "offset_bytes": 353792,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 88,
+      "offset_bytes": 354048,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 89,
+      "offset_bytes": 354304,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 90,
+      "offset_bytes": 354560,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 91,
+      "offset_bytes": 354816,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 92,
+      "offset_bytes": 355072,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 93,
+      "offset_bytes": 355328,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 94,
+      "offset_bytes": 355584,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 95,
+      "offset_bytes": 355840,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 96,
+      "offset_bytes": 356096,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 97,
+      "offset_bytes": 356352,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 98,
+      "offset_bytes": 356608,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 99,
+      "offset_bytes": 356864,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 100,
+      "offset_bytes": 357120,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 101,
+      "offset_bytes": 357376,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 102,
+      "offset_bytes": 357632,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 103,
+      "offset_bytes": 357888,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 104,
+      "offset_bytes": 358144,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 105,
+      "offset_bytes": 358400,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 106,
+      "offset_bytes": 358656,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 107,
+      "offset_bytes": 358912,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 108,
+      "offset_bytes": 359168,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 109,
+      "offset_bytes": 359424,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 110,
+      "offset_bytes": 359680,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 111,
+      "offset_bytes": 359936,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 112,
+      "offset_bytes": 360192,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 113,
+      "offset_bytes": 360448,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 114,
+      "offset_bytes": 360704,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 115,
+      "offset_bytes": 360960,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 116,
+      "offset_bytes": 361216,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 117,
+      "offset_bytes": 361472,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 118,
+      "offset_bytes": 361728,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 119,
+      "offset_bytes": 361984,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 120,
+      "offset_bytes": 362240,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 121,
+      "offset_bytes": 362496,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 122,
+      "offset_bytes": 362752,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 123,
+      "offset_bytes": 363008,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 124,
+      "offset_bytes": 363264,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 125,
+      "offset_bytes": 363520,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 126,
+      "offset_bytes": 363776,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 127,
+      "offset_bytes": 364032,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 8193,
+      "offset_bytes": 2428928,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 14,
+      "offset_bytes": 335104,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 20,
+      "offset_bytes": 336640,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 21,
+      "offset_bytes": 336896,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 15,
+      "offset_bytes": 335360,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 24,
+      "offset_bytes": 337664,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 16,
+      "offset_bytes": 335616,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 23,
+      "offset_bytes": 337408,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 8194,
+      "offset_bytes": 2429184,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 18,
+      "offset_bytes": 336128,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 19,
+      "offset_bytes": 336384,
+      "hidden_data_size_bytes": 15
+    },
+    {
+      "inode": 22,
+      "offset_bytes": 337152,
+      "hidden_data_size_bytes": 10
+    }
+  ]
+}

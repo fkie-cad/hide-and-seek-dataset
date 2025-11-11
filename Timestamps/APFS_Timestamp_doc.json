@@ -1,0 +1,420 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were embedded in APFS inode timestamp fields. Each inode contains four 8 byte timestamp values (creation, modification, change, access). The lower 32 bits store nanosecond-precision values but were repurposed to hold 4 byte fragments of hidden data. The structure stays valid, while payload is distributed across multiple inodes and timestamps.",
+  "image_name": "APFS_Timestamp.img",
+  "filesystem": "APFS",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Each timestamp overwrite contributes 4 hidden bytes.",
+    "Grouping by inode offset shows how the payload fragments are distributed.",
+    "Detection requires low-level timestamp parsing and entropy/pattern checks."
+  ],
+  "timestamp_hiding_info": {
+    "total_hidden_data_bytes": 100,
+    "hidden_bytes_per_inode": 16,
+    "bytes_per_timestamp": 4,
+    "writes_total": 25,
+    "writes": [
+      {
+        "timestamp_start_offset_bytes": 5229320,
+        "hidden_data": "ATAH",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 2808,
+        "inode_offset_bytes": 5229304
+      },
+      {
+        "timestamp_start_offset_bytes": 5229508,
+        "hidden_data": "DEN",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 2996,
+        "inode_offset_bytes": 5229492
+      },
+      {
+        "timestamp_start_offset_bytes": 5229516,
+        "hidden_data": "DATA",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 2996,
+        "inode_offset_bytes": 5229492
+      },
+      {
+        "timestamp_start_offset_bytes": 5229524,
+        "hidden_data": "HIDD",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 2996,
+        "inode_offset_bytes": 5229492
+      },
+      {
+        "timestamp_start_offset_bytes": 5229532,
+        "hidden_data": "EN D",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 2996,
+        "inode_offset_bytes": 5229492
+      },
+      {
+        "timestamp_start_offset_bytes": 5229696,
+        "hidden_data": "TAHI",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3184,
+        "inode_offset_bytes": 5229680
+      },
+      {
+        "timestamp_start_offset_bytes": 5229704,
+        "hidden_data": "DDEN",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3184,
+        "inode_offset_bytes": 5229680
+      },
+      {
+        "timestamp_start_offset_bytes": 5229712,
+        "hidden_data": "DAT",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3184,
+        "inode_offset_bytes": 5229680
+      },
+      {
+        "timestamp_start_offset_bytes": 5229720,
+        "hidden_data": "AHID",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3184,
+        "inode_offset_bytes": 5229680
+      },
+      {
+        "timestamp_start_offset_bytes": 5229884,
+        "hidden_data": "EN D",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3372,
+        "inode_offset_bytes": 5229868
+      },
+      {
+        "timestamp_start_offset_bytes": 5229892,
+        "hidden_data": "ATAH",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3372,
+        "inode_offset_bytes": 5229868
+      },
+      {
+        "timestamp_start_offset_bytes": 5229900,
+        "hidden_data": "IDDE",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3372,
+        "inode_offset_bytes": 5229868
+      },
+      {
+        "timestamp_start_offset_bytes": 5229908,
+        "hidden_data": "N DA",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3372,
+        "inode_offset_bytes": 5229868
+      },
+      {
+        "timestamp_start_offset_bytes": 5230072,
+        "hidden_data": "AHID",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3560,
+        "inode_offset_bytes": 5230056
+      },
+      {
+        "timestamp_start_offset_bytes": 5230080,
+        "hidden_data": "DEN",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3560,
+        "inode_offset_bytes": 5230056
+      },
+      {
+        "timestamp_start_offset_bytes": 5230088,
+        "hidden_data": "DATA",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3560,
+        "inode_offset_bytes": 5230056
+      },
+      {
+        "timestamp_start_offset_bytes": 5230096,
+        "hidden_data": "HIDD",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3560,
+        "inode_offset_bytes": 5230056
+      },
+      {
+        "timestamp_start_offset_bytes": 5230260,
+        "hidden_data": "N DA",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3748,
+        "inode_offset_bytes": 5230244
+      },
+      {
+        "timestamp_start_offset_bytes": 5230268,
+        "hidden_data": "TAHI",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3748,
+        "inode_offset_bytes": 5230244
+      },
+      {
+        "timestamp_start_offset_bytes": 5230276,
+        "hidden_data": "DDEN",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3748,
+        "inode_offset_bytes": 5230244
+      },
+      {
+        "timestamp_start_offset_bytes": 5230284,
+        "hidden_data": "DAT",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3748,
+        "inode_offset_bytes": 5230244
+      },
+      {
+        "timestamp_start_offset_bytes": 5230448,
+        "hidden_data": "HIDD",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3936,
+        "inode_offset_bytes": 5230432
+      },
+      {
+        "timestamp_start_offset_bytes": 5230456,
+        "hidden_data": "EN D",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3936,
+        "inode_offset_bytes": 5230432
+      },
+      {
+        "timestamp_start_offset_bytes": 5230464,
+        "hidden_data": "ATAH",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3936,
+        "inode_offset_bytes": 5230432
+      },
+      {
+        "timestamp_start_offset_bytes": 5230472,
+        "hidden_data": "IDDE",
+        "node_offset_bytes": 5226496,
+        "offset_within_node_bytes": 3936,
+        "inode_offset_bytes": 5230432
+      }
+    ],
+    "writes_grouped_by_inode": [
+      {
+        "inode_offset_bytes": 5229304,
+        "writes_count": 1,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5229320,
+            "hidden_data": "ATAH",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 2808,
+            "inode_offset_bytes": 5229304
+          }
+        ]
+      },
+      {
+        "inode_offset_bytes": 5229492,
+        "writes_count": 4,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5229508,
+            "hidden_data": "DEN",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 2996,
+            "inode_offset_bytes": 5229492
+          },
+          {
+            "timestamp_start_offset_bytes": 5229516,
+            "hidden_data": "DATA",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 2996,
+            "inode_offset_bytes": 5229492
+          },
+          {
+            "timestamp_start_offset_bytes": 5229524,
+            "hidden_data": "HIDD",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 2996,
+            "inode_offset_bytes": 5229492
+          },
+          {
+            "timestamp_start_offset_bytes": 5229532,
+            "hidden_data": "EN D",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 2996,
+            "inode_offset_bytes": 5229492
+          }
+        ]
+      },
+      {
+        "inode_offset_bytes": 5229680,
+        "writes_count": 4,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5229696,
+            "hidden_data": "TAHI",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3184,
+            "inode_offset_bytes": 5229680
+          },
+          {
+            "timestamp_start_offset_bytes": 5229704,
+            "hidden_data": "DDEN",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3184,
+            "inode_offset_bytes": 5229680
+          },
+          {
+            "timestamp_start_offset_bytes": 5229712,
+            "hidden_data": "DAT",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3184,
+            "inode_offset_bytes": 5229680
+          },
+          {
+            "timestamp_start_offset_bytes": 5229720,
+            "hidden_data": "AHID",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3184,
+            "inode_offset_bytes": 5229680
+          }
+        ]
+      },
+      {
+        "inode_offset_bytes": 5229868,
+        "writes_count": 4,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5229884,
+            "hidden_data": "EN D",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3372,
+            "inode_offset_bytes": 5229868
+          },
+          {
+            "timestamp_start_offset_bytes": 5229892,
+            "hidden_data": "ATAH",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3372,
+            "inode_offset_bytes": 5229868
+          },
+          {
+            "timestamp_start_offset_bytes": 5229900,
+            "hidden_data": "IDDE",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3372,
+            "inode_offset_bytes": 5229868
+          },
+          {
+            "timestamp_start_offset_bytes": 5229908,
+            "hidden_data": "N DA",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3372,
+            "inode_offset_bytes": 5229868
+          }
+        ]
+      },
+      {
+        "inode_offset_bytes": 5230056,
+        "writes_count": 4,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5230072,
+            "hidden_data": "AHID",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3560,
+            "inode_offset_bytes": 5230056
+          },
+          {
+            "timestamp_start_offset_bytes": 5230080,
+            "hidden_data": "DEN",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3560,
+            "inode_offset_bytes": 5230056
+          },
+          {
+            "timestamp_start_offset_bytes": 5230088,
+            "hidden_data": "DATA",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3560,
+            "inode_offset_bytes": 5230056
+          },
+          {
+            "timestamp_start_offset_bytes": 5230096,
+            "hidden_data": "HIDD",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3560,
+            "inode_offset_bytes": 5230056
+          }
+        ]
+      },
+      {
+        "inode_offset_bytes": 5230244,
+        "writes_count": 4,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5230260,
+            "hidden_data": "N DA",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3748,
+            "inode_offset_bytes": 5230244
+          },
+          {
+            "timestamp_start_offset_bytes": 5230268,
+            "hidden_data": "TAHI",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3748,
+            "inode_offset_bytes": 5230244
+          },
+          {
+            "timestamp_start_offset_bytes": 5230276,
+            "hidden_data": "DDEN",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3748,
+            "inode_offset_bytes": 5230244
+          },
+          {
+            "timestamp_start_offset_bytes": 5230284,
+            "hidden_data": "DAT",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3748,
+            "inode_offset_bytes": 5230244
+          }
+        ]
+      },
+      {
+        "inode_offset_bytes": 5230432,
+        "writes_count": 4,
+        "writes": [
+          {
+            "timestamp_start_offset_bytes": 5230448,
+            "hidden_data": "HIDD",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3936,
+            "inode_offset_bytes": 5230432
+          },
+          {
+            "timestamp_start_offset_bytes": 5230456,
+            "hidden_data": "EN D",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3936,
+            "inode_offset_bytes": 5230432
+          },
+          {
+            "timestamp_start_offset_bytes": 5230464,
+            "hidden_data": "ATAH",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3936,
+            "inode_offset_bytes": 5230432
+          },
+          {
+            "timestamp_start_offset_bytes": 5230472,
+            "hidden_data": "IDDE",
+            "node_offset_bytes": 5226496,
+            "offset_within_node_bytes": 3936,
+            "inode_offset_bytes": 5230432
+          }
+        ]
+      }
+    ]
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 100,
+    "segments_used": 25,
+    "bytes_per_segment": 4
+  }
+}
