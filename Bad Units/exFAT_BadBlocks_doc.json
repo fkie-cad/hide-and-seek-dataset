@@ -1,0 +1,78 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were written into clusters that were deliberately marked as 'bad' in the exFAT File Allocation Table (FAT). By setting FAT entries to the value 0xFFFFFFF7, the filesystem flags these clusters as defective and avoids their use. However, the data region for these clusters remains accessible and was overwritten with repeated 'HIDDEN DATA' strings. This approach stores payloads in unused but logically excluded storage regions.",
+  "image_name": "exFat_BadBlocks.img",
+  "filesystem": "exFAT",
+  "cluster_size_bytes": 32768,
+  "sector_size_bytes": 512,
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Bad clusters are flagged with value 0xFFFFFFF7 in the FAT, excluding them from normal allocation.",
+    "Each cluster holds 32 KiB of hidden data, stored in physically contiguous sectors.",
+    "The FAT marks these clusters as bad, concealing data from regular access.",
+    "Detection requires manual inspection of clusters marked as bad and comparison with expected zero-filled areas."
+  ],
+  "bad_clusters_info": {
+    "fat_start_offset_hex": "0x100000",
+    "cluster_heap_start_sector": 4096,
+    "cluster_heap_start_offset_hex": "0x200000",
+    "clusters_used_count": 8,
+    "clusters": [
+      {
+        "cluster": 136,
+        "fat_offset_hex": "0x100228",
+        "data_offset_hex": "0x640000",
+        "data_offset_bytes": 6553600
+      },
+      {
+        "cluster": 137,
+        "fat_offset_hex": "0x10022C",
+        "data_offset_hex": "0x648000",
+        "data_offset_bytes": 6592768
+      },
+      {
+        "cluster": 138,
+        "fat_offset_hex": "0x100230",
+        "data_offset_hex": "0x650000",
+        "data_offset_bytes": 6631936
+      },
+      {
+        "cluster": 139,
+        "fat_offset_hex": "0x100234",
+        "data_offset_hex": "0x658000",
+        "data_offset_bytes": 6671104
+      },
+      {
+        "cluster": 140,
+        "fat_offset_hex": "0x100238",
+        "data_offset_hex": "0x660000",
+        "data_offset_bytes": 6710272
+      },
+      {
+        "cluster": 141,
+        "fat_offset_hex": "0x10023C",
+        "data_offset_hex": "0x668000",
+        "data_offset_bytes": 6749440
+      },
+      {
+        "cluster": 142,
+        "fat_offset_hex": "0x100240",
+        "data_offset_hex": "0x670000",
+        "data_offset_bytes": 6788608
+      },
+      {
+        "cluster": 143,
+        "fat_offset_hex": "0x100244",
+        "data_offset_hex": "0x678000",
+        "data_offset_bytes": 6827776
+      }
+    ],
+    "hidden_data_bytes": 262144
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 262144,
+    "segments_used": 8,
+    "bytes_per_segment": 32768
+  }
+}

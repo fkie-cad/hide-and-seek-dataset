@@ -1,0 +1,267 @@
+{
+  "description": "Data hidden in clusters falsely marked as defective (bad) in the FAT filesystem. These clusters are listed in the File Allocation Table (FAT) as bad, but actually contain hidden data. This technique can be used to conceal information within a filesystem by exploiting the way bad clusters are handled.",
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "FAT_Bad_Cluster.img",
+  "filesystem": "FAT",
+  "fake_bad_clusters": {
+    "count": 62,
+    "entries": [
+      {
+        "cluster_number": 61,
+        "offset_bytes": 2355200
+      },
+      {
+        "cluster_number": 62,
+        "offset_bytes": 2359296
+      },
+      {
+        "cluster_number": 76,
+        "offset_bytes": 2416640
+      },
+      {
+        "cluster_number": 77,
+        "offset_bytes": 2420736
+      },
+      {
+        "cluster_number": 88,
+        "offset_bytes": 2465792
+      },
+      {
+        "cluster_number": 90,
+        "offset_bytes": 2473984
+      },
+      {
+        "cluster_number": 270,
+        "offset_bytes": 3211264
+      },
+      {
+        "cluster_number": 271,
+        "offset_bytes": 3215360
+      },
+      {
+        "cluster_number": 272,
+        "offset_bytes": 3219456
+      },
+      {
+        "cluster_number": 273,
+        "offset_bytes": 3223552
+      },
+      {
+        "cluster_number": 274,
+        "offset_bytes": 3227648
+      },
+      {
+        "cluster_number": 275,
+        "offset_bytes": 3231744
+      },
+      {
+        "cluster_number": 276,
+        "offset_bytes": 3235840
+      },
+      {
+        "cluster_number": 277,
+        "offset_bytes": 3239936
+      },
+      {
+        "cluster_number": 278,
+        "offset_bytes": 3244032
+      },
+      {
+        "cluster_number": 279,
+        "offset_bytes": 3248128
+      },
+      {
+        "cluster_number": 280,
+        "offset_bytes": 3252224
+      },
+      {
+        "cluster_number": 281,
+        "offset_bytes": 3256320
+      },
+      {
+        "cluster_number": 282,
+        "offset_bytes": 3260416
+      },
+      {
+        "cluster_number": 283,
+        "offset_bytes": 3264512
+      },
+      {
+        "cluster_number": 284,
+        "offset_bytes": 3268608
+      },
+      {
+        "cluster_number": 285,
+        "offset_bytes": 3272704
+      },
+      {
+        "cluster_number": 286,
+        "offset_bytes": 3276800
+      },
+      {
+        "cluster_number": 287,
+        "offset_bytes": 3280896
+      },
+      {
+        "cluster_number": 288,
+        "offset_bytes": 3284992
+      },
+      {
+        "cluster_number": 289,
+        "offset_bytes": 3289088
+      },
+      {
+        "cluster_number": 290,
+        "offset_bytes": 3293184
+      },
+      {
+        "cluster_number": 291,
+        "offset_bytes": 3297280
+      },
+      {
+        "cluster_number": 292,
+        "offset_bytes": 3301376
+      },
+      {
+        "cluster_number": 293,
+        "offset_bytes": 3305472
+      },
+      {
+        "cluster_number": 294,
+        "offset_bytes": 3309568
+      },
+      {
+        "cluster_number": 295,
+        "offset_bytes": 3313664
+      },
+      {
+        "cluster_number": 296,
+        "offset_bytes": 3317760
+      },
+      {
+        "cluster_number": 297,
+        "offset_bytes": 3321856
+      },
+      {
+        "cluster_number": 298,
+        "offset_bytes": 3325952
+      },
+      {
+        "cluster_number": 299,
+        "offset_bytes": 3330048
+      },
+      {
+        "cluster_number": 300,
+        "offset_bytes": 3334144
+      },
+      {
+        "cluster_number": 301,
+        "offset_bytes": 3338240
+      },
+      {
+        "cluster_number": 302,
+        "offset_bytes": 3342336
+      },
+      {
+        "cluster_number": 303,
+        "offset_bytes": 3346432
+      },
+      {
+        "cluster_number": 304,
+        "offset_bytes": 3350528
+      },
+      {
+        "cluster_number": 305,
+        "offset_bytes": 3354624
+      },
+      {
+        "cluster_number": 306,
+        "offset_bytes": 3358720
+      },
+      {
+        "cluster_number": 307,
+        "offset_bytes": 3362816
+      },
+      {
+        "cluster_number": 308,
+        "offset_bytes": 3366912
+      },
+      {
+        "cluster_number": 309,
+        "offset_bytes": 3371008
+      },
+      {
+        "cluster_number": 310,
+        "offset_bytes": 3375104
+      },
+      {
+        "cluster_number": 311,
+        "offset_bytes": 3379200
+      },
+      {
+        "cluster_number": 312,
+        "offset_bytes": 3383296
+      },
+      {
+        "cluster_number": 313,
+        "offset_bytes": 3387392
+      },
+      {
+        "cluster_number": 314,
+        "offset_bytes": 3391488
+      },
+      {
+        "cluster_number": 315,
+        "offset_bytes": 3395584
+      },
+      {
+        "cluster_number": 316,
+        "offset_bytes": 3399680
+      },
+      {
+        "cluster_number": 317,
+        "offset_bytes": 3403776
+      },
+      {
+        "cluster_number": 318,
+        "offset_bytes": 3407872
+      },
+      {
+        "cluster_number": 319,
+        "offset_bytes": 3411968
+      },
+      {
+        "cluster_number": 320,
+        "offset_bytes": 3416064
+      },
+      {
+        "cluster_number": 321,
+        "offset_bytes": 3420160
+      },
+      {
+        "cluster_number": 322,
+        "offset_bytes": 3424256
+      },
+      {
+        "cluster_number": 323,
+        "offset_bytes": 3428352
+      },
+      {
+        "cluster_number": 324,
+        "offset_bytes": 3432448
+      },
+      {
+        "cluster_number": 325,
+        "offset_bytes": 3436544
+      }
+    ]
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 253000,
+    "pattern": "HIDDEN DATA",
+    "repeated": true
+  },
+  "notes": {
+    "plain_text_preview_truncated": "HIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATA..."
+  }
+}
