@@ -1,0 +1,207 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were written into unused slack space within APFS superblocks and object maps. Each superblock and mapping structure leafes unused bytes at the end of a cluster, which are not actively used by the filesystem. This experiment filled the unused slack areas of specific APFS metadata structures with repeated 'HIDDEN DATA' sequences, while leaving other generations untouched.",
+  "image_name": "APFS_Superblock_Slack.img",
+  "filesystem": "APFS",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Only the newest generation entries were used to store hidden data; older generations remained unmodified.",
+    "Slack areas inside APFS container and volume structures allow small payloads without structural corruption.",
+    "Detection requires parsing superblock generations and verifying unused bytes between metadata fields."
+  ],
+  "hidden_data_info": {
+    "total_hidden_data_bytes": 10000,
+    "hidden_data_pattern": "HIDDEN DATA",
+    "locations": {
+      "container_superblocks": {
+        "used_generation": 13,
+        "hidden_data_offset": 42344,
+        "entries": [
+          {
+            "offset_bytes": 40960,
+            "generation": 13,
+            "used": true,
+            "hidden_data_offset": 42344
+          },
+          {
+            "offset_bytes": 32768,
+            "generation": 12,
+            "used": false
+          },
+          {
+            "offset_bytes": 24576,
+            "generation": 11,
+            "used": false
+          },
+          {
+            "offset_bytes": 16384,
+            "generation": 10,
+            "used": false
+          },
+          {
+            "offset_bytes": 8192,
+            "generation": 9,
+            "used": false
+          },
+          {
+            "offset_bytes": 65536,
+            "generation": 8,
+            "used": false
+          },
+          {
+            "offset_bytes": 57344,
+            "generation": 7,
+            "used": false
+          },
+          {
+            "offset_bytes": 49152,
+            "generation": 6,
+            "used": false
+          }
+        ]
+      },
+      "container_object_maps": {
+        "used_generation": 13,
+        "hidden_data_offset": 5455960,
+        "entries": [
+          {
+            "offset_bytes": 5455872,
+            "generation": 13,
+            "used": true,
+            "hidden_data_offset": 5455960
+          },
+          {
+            "offset_bytes": 5443584,
+            "generation": 12,
+            "used": false
+          },
+          {
+            "offset_bytes": 5419008,
+            "generation": 11,
+            "used": false
+          },
+          {
+            "offset_bytes": 5369856,
+            "generation": 10,
+            "used": false
+          },
+          {
+            "offset_bytes": 5320704,
+            "generation": 9,
+            "used": false
+          },
+          {
+            "offset_bytes": 5271552,
+            "generation": 8,
+            "used": false
+          },
+          {
+            "offset_bytes": 4489216,
+            "generation": 7,
+            "used": false
+          },
+          {
+            "offset_bytes": 4464640,
+            "generation": 6,
+            "used": false
+          }
+        ]
+      },
+      "volume_superblocks": {
+        "used_generation": 13,
+        "hidden_data_offset": 5452760,
+        "entries": [
+          {
+            "offset_bytes": 5451776,
+            "generation": 13,
+            "used": true,
+            "hidden_data_offset": 5452760
+          },
+          {
+            "offset_bytes": 5439488,
+            "generation": 12,
+            "used": false
+          },
+          {
+            "offset_bytes": 5414912,
+            "generation": 11,
+            "used": false
+          },
+          {
+            "offset_bytes": 5365760,
+            "generation": 10,
+            "used": false
+          },
+          {
+            "offset_bytes": 5316608,
+            "generation": 9,
+            "used": false
+          },
+          {
+            "offset_bytes": 5267456,
+            "generation": 8,
+            "used": false
+          },
+          {
+            "offset_bytes": 4485120,
+            "generation": 7,
+            "used": false
+          },
+          {
+            "offset_bytes": 4460544,
+            "generation": 6,
+            "used": false
+          }
+        ]
+      },
+      "volume_object_maps": {
+        "used_generation": 12,
+        "hidden_data_offset": 5431384,
+        "entries": [
+          {
+            "offset_bytes": 5431296,
+            "generation": 12,
+            "used": true,
+            "hidden_data_offset": 5431384
+          },
+          {
+            "offset_bytes": 5394432,
+            "generation": 11,
+            "used": false
+          },
+          {
+            "offset_bytes": 5345280,
+            "generation": 10,
+            "used": false
+          },
+          {
+            "offset_bytes": 5296128,
+            "generation": 9,
+            "used": false
+          },
+          {
+            "offset_bytes": 5218304,
+            "generation": 8,
+            "used": false
+          },
+          {
+            "offset_bytes": 4476928,
+            "generation": 7,
+            "used": false
+          },
+          {
+            "offset_bytes": 4452352,
+            "generation": 6,
+            "used": false
+          }
+        ]
+      }
+    }
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 10000,
+    "segments_used": 4,
+    "bytes_per_segment_max": 2500
+  }
+}

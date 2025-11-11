@@ -1,0 +1,33 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were written into the slack region of the exFAT Allocation Bitmap. The bitmap file marks used and free clusters but may contain unused padding bytes at the end of its allocation area. These trailing bytes, not used for actual allocation tracking, were filled with repeated 'HIDDEN DATA' patterns. The manipulation does not affect cluster allocation integrity but changes the bitmap tail content.",
+  "image_name": "exFat_Bitmap_Slack.img",
+  "filesystem": "exFAT",
+  "sector_size_bytes": 512,
+  "cluster_size_bytes": 32768,
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "The hidden data occupy unused bytes following the Allocation Bitmap structure.",
+    "This area is part of the metadata region but typically unreferenced by the filesystem.",
+    "Detection is possible by analyzing the Allocation Bitmap tail for non-zero."
+  ],
+  "bitmap_slack_info": {
+    "start_sector_allocation_bitmap": 4096,
+    "allocation_bitmap_size_bytes": 4088,
+    "hidden_data": {
+      "start_offset_hex": "0x201000",
+      "end_offset_hex": "0x207FFF",
+      "start_offset_bytes": 2101248,
+      "end_offset_bytes": 2129919,
+      "region_size_bytes": 28672,
+      "start_sector": 4104,
+      "total_hidden_data_bytes": 28672
+    }
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "segments_used": 1,
+    "bytes_per_segment": 28672,
+    "total_bytes": 28672
+  }
+}

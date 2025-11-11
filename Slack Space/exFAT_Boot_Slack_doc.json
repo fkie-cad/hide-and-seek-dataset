@@ -1,0 +1,41 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "The hidden payload was placed in the boot-region slack of an exFAT image. For each 4096 byte sector that contains a 512 byte exFAT boot record, the remaining tail bytes are unused in normal operation. These unused tails (main boot and backup boot) were fully filled with repeated 'HIDDEN DATA' without modifying critical boot fields or filesystem metadata.",
+  "image_name": "exFat_Boot_Slack.img",
+  "filesystem": "exFAT",
+  "sector_size_bytes": 4096,
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Slack begins immediately after the 512th byte boot record inside each 4096 byte sector.",
+    "Both main and backup boot regions contain identical slack capacities in this image.",
+    "This method keeps partition tables and boot parameters intact; detection requires comparing the slack bytes against a clean baseline."
+  ],
+  "boot_slack_info": {
+    "regions_used": 2,
+    "entries": [
+      {
+        "region_index": 1,
+        "name": "Main Boot Slack",
+        "start_offset_bytes": 512,
+        "end_offset_bytes": 4095,
+        "region_size_bytes": 3584,
+        "hidden_data_bytes": 3584
+      },
+      {
+        "region_index": 2,
+        "name": "Backup Boot Slack",
+        "start_offset_bytes": 49664,
+        "end_offset_bytes": 53247,
+        "region_size_bytes": 3584,
+        "hidden_data_bytes": 3584
+      }
+    ],
+    "total_hidden_bytes": 7168
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "segments_used": 2,
+    "bytes_per_segment": 3584,
+    "total_bytes": 7168
+  }
+}

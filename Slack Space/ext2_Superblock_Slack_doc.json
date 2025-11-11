@@ -1,0 +1,84 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data are written into the unused slack region inside each Ext2 superblock. The payload occupies the tail area of the superblock block (from offset 0x250 to 0x3FF), which is unused in normal operation and can store data across primary and backup superblocks.",
+  "image_name": "ext2_superblock_slack.img",
+  "filesystem": "Ext2",
+  "block_size_bytes": 4096,
+
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "This method spreads payload over multiple superblocks (primary and backups) to maximize capacity."
+  ],
+
+  "slack_info": {  
+    "slack_start_offset_in_block": 592,
+    "slack_end_offset_in_block": 1024,
+    "per_superblock_slack_bytes": 432,
+    "modified_superblocks": [
+      {
+        "block": 0,
+        "absolute_offset_bytes": 1616
+      },
+      {
+        "block": 32768,
+        "absolute_offset_bytes": 134218320
+      },
+      {
+        "block": 98304,
+        "absolute_offset_bytes": 402653776
+      },
+      {
+        "block": 163840,
+        "absolute_offset_bytes": 671089232
+      },
+      {
+        "block": 229376,
+        "absolute_offset_bytes": 939524688
+      }
+    ],
+    "blocks_used_count": 5,
+    "total_slack_available_bytes": 2160,
+    "hidden_data_bytes": 2160
+  },
+  
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 2160,
+    "segments_used": 5,
+    "bytes_per_segment_max": 432,
+    "distribution": [
+      {
+        "segment_index": 0,
+        "superblock_block": 0,
+        "absolute_start_offset_bytes": 592,
+        "bytes_used": 432
+      },
+      {
+        "segment_index": 1,
+        "superblock_block": 32768,
+        "absolute_start_offset_bytes": 33555024,
+        "bytes_used": 432
+      },
+      {
+        "segment_index": 2,
+        "superblock_block": 98304,
+        "absolute_start_offset_bytes": 100663888,
+        "bytes_used": 432
+      },
+      {
+        "segment_index": 3,
+        "superblock_block": 163840,
+        "absolute_start_offset_bytes": 167772752,
+        "bytes_used": 432
+      },
+      {
+        "segment_index": 4,
+        "superblock_block": 229376,
+        "absolute_start_offset_bytes": 234881616,
+        "bytes_used": 432
+      }
+    ]
+  }
+
+
+}

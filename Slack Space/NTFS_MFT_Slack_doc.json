@@ -1,0 +1,50 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data hidden in NTFS MFT slack by writing payload into unused bytes at the end of selected mft entries and their mirrored positions.",
+  "image": "NTFS_MFT_Slack.img",
+  "filesystem": "NTFS",
+  "sector_size_bytes": 512,
+  "cluster_size_bytes": 4096,
+  "mft_layout": {
+    "mft_start_cluster": 4,
+    "mft_start_offset_bytes": 16384,
+    "mft_mirror_start_cluster": 131071,
+    "mft_mirror_start_offset_bytes": 536866816
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 1100,
+    "pattern": "HIDDEN DATA",
+    "repeated": true,
+    "plain_text_preview_truncated": "HIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHID..."
+  },
+  "entries": [
+    {
+      "slack_offset_bytes": 16792,
+      "allowed_length_bytes": 102,
+      "mft_offset_bytes": 16792,
+      "mft_mirror_offset_bytes": 536867224,
+      "hidden_data_size_bytes": 102
+    },
+    {
+      "slack_offset_bytes": 16896,
+      "allowed_length_bytes": 510,
+      "mft_offset_bytes": 16896,
+      "mft_mirror_offset_bytes": 536867328,
+      "hidden_data_size_bytes": 510
+    },
+    {
+      "slack_offset_bytes": 17752,
+      "allowed_length_bytes": 166,
+      "mft_offset_bytes": 17752,
+      "mft_mirror_offset_bytes": 536868184,
+      "hidden_data_size_bytes": 166
+    },
+    {
+      "slack_offset_bytes": 17920,
+      "allowed_length_bytes": 422,
+      "mft_offset_bytes": 17920,
+      "mft_mirror_offset_bytes": 536868352,
+      "hidden_data_size_bytes": 322
+    }
+  ]
+}

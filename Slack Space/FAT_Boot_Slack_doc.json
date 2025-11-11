@@ -1,0 +1,20 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data hidden in FAT boot sector slack. When the filesystem sector size is greater than 512 bytes, the slack at the end of sector 0 spans from byte 0x200 up to sector_size. In this image, hidden data is placed in that slack area.",
+  "image": "fat_boot_slack.img",
+  "filesystem": "FAT32",
+  "sector_size_bytes": 4096,
+  "cluster_size_bytes": 4096,
+  "boot_sector_slack": {
+    "slack_offset_bytes": 512,
+    "size_bytes": 3584
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 3575,
+    "pattern": "HIDDEN DATA",
+    "repeated": true
+  },
+  "notes": {
+    "plain_text_preview_truncated": "HIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN..."
+  }
+}

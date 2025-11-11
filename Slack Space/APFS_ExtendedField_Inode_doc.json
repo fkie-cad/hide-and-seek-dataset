@@ -1,0 +1,45 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were stored in the extended field padding areas within APFS inode structures. These regions are reserved for future extensions of the inode and remain unused under normal conditions.",
+  "image_name": "APFS_ExtendedField_Inode.img",
+  "filesystem": "APFS",
+  "plaintext_preview": "HIDDEN TEXT",
+  "notes": [
+    "Each padding field provided 3 bytes for hidden data.",
+    "The same node offset was used for all hidden segments.",
+    "The embedded data are short text fragments encoded directly into the inode padding area.",
+    "Detection requires parsing extended field structures and checking for non zero padding bytes."
+  ],
+  "extended_field_info": {
+    "entries_count": 4,
+    "total_hidden_data_bytes": 12,
+    "entries": [
+      {
+        "padding_offset_bytes": 5230549,
+        "node_offset_bytes": 5226496,
+        "hidden_data_size_bytes": 3
+      },
+      {
+        "padding_offset_bytes": 5230361,
+        "node_offset_bytes": 5226496,
+        "hidden_data_size_bytes": 3
+      },
+      {
+        "padding_offset_bytes": 5230173,
+        "node_offset_bytes": 5226496,
+        "hidden_data_size_bytes": 3
+      },
+      {
+        "padding_offset_bytes": 5229985,
+        "node_offset_bytes": 5226496,
+        "hidden_data_size_bytes": 3
+      }
+    ]
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN TEXT",
+    "total_bytes": 12,
+    "segments_used": 4,
+    "bytes_per_segment": 3
+  }
+}
