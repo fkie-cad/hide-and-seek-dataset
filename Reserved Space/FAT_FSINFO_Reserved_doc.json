@@ -1,0 +1,25 @@
+{
+  "description": "Data hidden in FSINFO structur reserved field (Main and Backup).The FSInfo structure is only present on volumes formatted FAT32",
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "FAT_FSINFO_Reserved.img",
+  "filesystem": "FAT32",
+  "sector_size_bytes": 512,
+  "fsinfo_reserved": {
+    "main": {
+      "reserved_field_offset_expr": "1 * Sector size + 4",
+      "reserved_field_offset_bytes": 516,
+      "reserved_field_size_bytes": 480
+    },
+    "backup": {
+      "reserved_field_offset_expr": "7 * Sector size + 4",
+      "reserved_field_offset_bytes": 3588,
+      "reserved_field_size_bytes": 480
+    }
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes_per_location": 480,
+    "total_hidden_data_size_bytes": 960,
+    "pattern": "HIDDEN DATA",
+    "repeated": true
+  }
+}

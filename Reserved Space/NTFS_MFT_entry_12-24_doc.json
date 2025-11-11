@@ -1,0 +1,113 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data hidden in NTFS MFT record slack within entries 12–24. The payload is written into the unused bytes before each record boundary inside the specified MFT range.",
+  "image": "NTFS_MFT_12-24.img",
+  "filesystem": "NTFS",
+  "mft_ranges": {
+    "relative_range_hex": "0x3000 - 0x6000",
+    "absolute_image_range_hex": "0x7000 - 0xA000"
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 10072,
+    "pattern": "HIDDEN DATA",
+    "repeated": true
+  },
+  "entries": [
+    {
+      "mft_record_offset_bytes": 28672,
+      "slack_info": {
+        "slack_offset_bytes": 28956,
+        "slack_end_offset_bytes": 29693,
+        "slack_size_bytes": 738
+      }
+    },
+    {
+      "mft_record_offset_bytes": 29696,
+      "slack_info": {
+        "slack_offset_bytes": 29980,
+        "slack_end_offset_bytes": 30717,
+        "slack_size_bytes": 738
+      }
+    },
+    {
+      "mft_record_offset_bytes": 30720,
+      "slack_info": {
+        "slack_offset_bytes": 31004,
+        "slack_end_offset_bytes": 31741,
+        "slack_size_bytes": 738
+      }
+    },
+    {
+      "mft_record_offset_bytes": 31744,
+      "slack_info": {
+        "slack_offset_bytes": 32028,
+        "slack_end_offset_bytes": 32765,
+        "slack_size_bytes": 738
+      }
+    },
+    {
+      "mft_record_offset_bytes": 32768,
+      "slack_info": {
+        "slack_offset_bytes": 32900,
+        "slack_end_offset_bytes": 33789,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 33792,
+      "slack_info": {
+        "slack_offset_bytes": 33924,
+        "slack_end_offset_bytes": 34813,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 34816,
+      "slack_info": {
+        "slack_offset_bytes": 34948,
+        "slack_end_offset_bytes": 35837,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 35840,
+      "slack_info": {
+        "slack_offset_bytes": 35972,
+        "slack_end_offset_bytes": 36861,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 36864,
+      "slack_info": {
+        "slack_offset_bytes": 36996,
+        "slack_end_offset_bytes": 37885,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 37888,
+      "slack_info": {
+        "slack_offset_bytes": 38020,
+        "slack_end_offset_bytes": 38909,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 38912,
+      "slack_info": {
+        "slack_offset_bytes": 39044,
+        "slack_end_offset_bytes": 39933,
+        "slack_size_bytes": 890
+      }
+    },
+    {
+      "mft_record_offset_bytes": 39936,
+      "slack_info": {
+        "slack_offset_bytes": 40068,
+        "slack_end_offset_bytes": 40957,
+        "slack_size_bytes": 890
+      }
+    }
+  ]
+}

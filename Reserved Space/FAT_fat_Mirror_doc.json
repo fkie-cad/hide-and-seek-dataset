@@ -1,0 +1,22 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data hidden in the FAT mirror region by overwriting the backup FAT (FAT2) sectors with a repeating payload.",
+  "image": "FAT_fat_Mirror.img",
+  "filesystem": "FAT",
+  "sector_size_bytes": 512,
+  "fat_mirror_region": {
+    "sectors_range": "2080-4127",
+    "start_sector": 2080,
+    "end_sector": 4127,
+    
+  },
+  "payload_summary": {
+    "hidden_data_offset_bytes": 1064960,
+    "hidden_data_size_bytes": 1048576,
+    "pattern": "HIDDEN DATA",
+    "repeated": true
+  },
+  "notes": {
+    "plain_text_preview_truncated": "HIDDEN DATA HIDDEN DATA HIDDEN DATA HIDDEN DATA HIDDEN DATA ..."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "The payload is written into the initial 1,024 bytes at the start of the Ext2 image. This region is reserved for a bootloader and precedes the primary filesystem structures, so regular filesystem metadata and file contents remain unchanged when the area is repurposed.",
+  "image_name": "ext2_Bootloader.img",
+  "filesystem": "Ext2",
+
+  "bootloader_region_info": {
+    "region_start_offset_bytes": 0,
+    "region_end_offset_bytes": 1023,
+    "region_length_bytes": 1024,
+    "hidden_data_bytes": 1024
+  },
+
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 1024,
+    "segments_used": 1,
+    "bytes_per_segment_max": 1024,
+    "distribution": [
+      {
+        "segment_index": 0,
+        "absolute_start_offset_bytes": 0,
+        "bytes_used": 1024
+      }
+    ]
+  },
+
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Bootloader area spans bytes 0–1023 from the image start.",
+    "This method intentionally avoids modifying in-file data or core filesystem metadata."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were written into the reserved space located directly after the second vdev label in a ZFS device. This area, typically between 512 KiB and 4 MiB, remains unused by the ZFS filesystem and can therefore store arbitrary data without affecting pool integrity. The region was filled with repeated 'HIDDEN DATA' strings.",
+  "image_name": "ZFS_label1_reserved.img",
+  "filesystem": "ZFS",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "The reserved region after label 1 is not referenced by the ZFS filesystem.",
+    "It can hold additional data until the pool is expanded or rewritten.",
+    "Detection requires scanning unallocated region after vdev label1 (2. label) ."
+  ],
+  "reserved_space_info": {
+    "vdev_guid": 2937660942614046565,
+    "region_start_offset_bytes": 524288,
+    "region_end_offset_bytes": 4194304,
+    "region_size_bytes": 3670016,
+    "hidden_data_pattern": "HIDDEN DATA",
+    "hidden_data_region_description": "3.5 MiB region after second vdev label"
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_hidden_bytes": 3670016,
+    "storage_region": "Reserved space after vdev label1",
+    "segments_used": 1
+  }
+}

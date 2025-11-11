@@ -1,0 +1,42 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden payload was embedded within reserved sectors of the Master Boot Record (MBR) and its backup in the exFAT image. These sectors are reserved for system use and typically remain unused, making them suitable for hiding small data segments. The insertion did not alter partition entries or other critical metadata, preserving normal disk functionality.",
+  "image_name": "exfat_MBR_Reserved.img",
+  "filesystem": "exFAT",
+  "sector_size_bytes": 512,
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Two reserved areas were modified: one in the main MBR and one in the backup copy.",
+    "Each reserved section spans 512 bytes, forming a total of 1024 hidden bytes.",
+    "The regions lie outside of the filesystems FAT and cluster heap areas.",
+    "This technique is detectable by comparing MBR reserved sector contents against a known-clean baseline."
+  ],
+  "reserved_sector_info": {
+    "regions_used": 2,
+    "entries": [
+      {
+        "region_index": 1,
+        "type": "Main MBR Reserved Sector",
+        "start_offset_bytes": 5120,
+        "end_offset_bytes": 5631,
+        "region_size_bytes": 512,
+        "hidden_data_bytes": 512
+      },
+      {
+        "region_index": 2,
+        "type": "Backup MBR Reserved Sector",
+        "start_offset_bytes": 11264,
+        "end_offset_bytes": 11775,
+        "region_size_bytes": 512,
+        "hidden_data_bytes": 512
+      }
+    ],
+    "total_hidden_bytes": 1024
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "segments_used": 2,
+    "bytes_per_segment": 512,
+    "total_bytes": 1024
+  }
+}

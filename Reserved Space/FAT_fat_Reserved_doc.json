@@ -1,0 +1,20 @@
+{
+  "description": "Data hidden in the FAT32 reserved area immediately before the first FAT. The payload is written starting at the first reserved-sector byte offset and spans the reserved space.",
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "FAT_fat_Reserved.img",
+  "filesystem": "FAT32",
+  "sector_size_bytes": 512,
+  "cluster_size_bytes": 4096,
+  "reserved_area_before_fat": {
+    "offset_bytes": 4096,
+    "length_bytes": 12288
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 12287,
+    "pattern": "HIDDEN DATA",
+    "repeated": true
+  },
+  "notes": {
+    "plain_text_preview_truncated": "HIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN"
+  }
+}

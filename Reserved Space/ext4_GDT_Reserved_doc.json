@@ -1,0 +1,52 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Data are concealed inside the reserved Group Descriptor Table (GDT) blocks of an Ext4 filesystem. These blocks are preallocated for future metadata growth and are typically left unused during normal operation, so writing the payload into them avoids altering regular file contents and primary metadata.",
+  "image_name": "ext4_GDT_Reserved.img",
+  "filesystem": "Ext4",
+  "block_size_bytes": 4096,
+
+  "reserved_gdt_info": {
+    "reserved_gdt_block_numbers": [
+      32771,
+      32772,
+      32773
+    ],
+    "blocks_used_count": 3,
+    "total_available_reserved_space_bytes": 2080768,
+    "hidden_data_bytes": 12000,
+    "utilization_percent": 0.58
+  },
+
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 12000,
+    "segments_used": 3,
+    "bytes_per_segment_max": 4096,
+    "distribution": [
+      {
+        "segment_index": 0,
+        "block_number": 32771,
+        "absolute_start_offset_bytes": 134230016,
+        "bytes_used": 4096
+      },
+      {
+        "segment_index": 1,
+        "block_number": 32772,
+        "absolute_start_offset_bytes": 134234112,
+        "bytes_used": 4096
+      },
+      {
+        "segment_index": 2,
+        "block_number": 32773,
+        "absolute_start_offset_bytes": 134238208,
+        "bytes_used": 3808
+      }
+    ]
+  },
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Block numbers are multiplied by the block size to derive absolute byte offsets from the start of the image.",
+    "Only a small subset of the reserved GDT area was used; the remaining capacity stays available.",
+    "Although reserved, these blocks can be overwritten if new Blockgroups are created."
+  ]
+}

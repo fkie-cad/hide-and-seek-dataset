@@ -1,0 +1,112 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "This documentation explains how hidden data were embedded within Btrfs inode structures. The payload was inserted into reserved 32-byte spaces located inside inodes contained within a single 16 KiB leaf block. All modifications required recalculating the leafs checksum to preserve filesystem consistency.",
+  "image_name": "btrfs_Inode_Reserved.img",
+  "filesystem": "Btrfs",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "All five hidden data insertions are located in the same 16 KiB Btrfs leaf block.",
+    "Each inode modification overwrote 32 reserved bytes used for alignment within the inode structure.",
+    "Checksum recalculation ensures consistency within the tree block hierarchy.",
+    "Btrfs uses CRC32C (Castagnoli) as the checksum algorithm when csum_type = 0."
+  ],
+  "image_details": {
+    "leaf_offset_bytes": 39567360,
+    "leaf_offset_hex": "0x25BC000",
+    "leaf_size_bytes": 16384,
+    "total_hidden_writes": 5
+  }, 
+  
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "segments_used": 5,
+    "bytes_per_segment": 32,
+    "total_hidden_bytes": 160
+  },
+
+  "hidden_data_entries": [
+    {
+      "inode": 266,
+      "absolute_start_offset_bytes": 39580858,
+      "absolute_end_offset_bytes": 39580889,
+      "in_leaf_offset_range_bytes": [
+        13498,
+        13529
+      ],
+      "in_leaf_offset_range_hex": [
+        "0x34BA",
+        "0x34D9"
+      ],
+      "length_bytes": 32
+    },
+    {
+      "inode": 263,
+      "absolute_start_offset_bytes": 39581079,
+      "absolute_end_offset_bytes": 39581110,
+      "in_leaf_offset_range_bytes": [
+        13719,
+        13750
+      ],
+      "in_leaf_offset_range_hex": [
+        "0x3597",
+        "0x35B6"
+      ],
+      "length_bytes": 32
+    },
+    {
+      "inode": 260,
+      "absolute_start_offset_bytes": 39583012,
+      "absolute_end_offset_bytes": 39583043,
+      "in_leaf_offset_range_bytes": [
+        15652,
+        15683
+      ],
+      "in_leaf_offset_range_hex": [
+        "0x3D24",
+        "0x3D43"
+      ],
+      "length_bytes": 32
+    },
+    {
+      "inode": 257,
+      "absolute_start_offset_bytes": 39583424,
+      "absolute_end_offset_bytes": 39583455,
+      "in_leaf_offset_range_bytes": [
+        16064,
+        16095
+      ],
+      "in_leaf_offset_range_hex": [
+        "0x3EC0",
+        "0x3EDF"
+      ],
+      "length_bytes": 32
+    },
+    {
+      "inode": 256,
+      "absolute_start_offset_bytes": 39583664,
+      "absolute_end_offset_bytes": 39583695,
+      "in_leaf_offset_range_bytes": [
+        16304,
+        16335
+      ],
+      "in_leaf_offset_range_hex": [
+        "0x3FB0",
+        "0x3FCF"
+      ],
+      "length_bytes": 32
+    }
+  ],
+  "checksum_info": {
+    "field_location": "leaf header bytes 0x00 - 0x1F",
+    "checksum_algorithm": "CRC32C (Castagnoli)",
+    "csum_type_value": 0,
+    "seed_value_hex": "0xFFFFFFFF",
+    "calculation_range_bytes": [
+      32,
+      16384
+    ],
+    "range_description": "From leaf offset +0x20 to +0x4000 (end of block)",
+    "update_requirement": "Parent node pointer entry must be updated with new child checksum."
+  }
+ 
+}

@@ -1,0 +1,22 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "The payload is written into the initial 1,024 bytes at the start of the Ext4 image. This region is reserved for a bootloader and precedes the superblock at offset 1,024, so regular filesystem data structures remain unchanged.",
+  "image_name": "ext4_Bootloader.img",
+  "filesystem": "Ext4",
+
+  "bootloader_region_info": {
+    "region_start_offset_bytes": 0,
+    "region_length_bytes": 1024,
+    "hidden_data_bytes": 1024
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 1024
+  },
+
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "The boot sector region spans bytes 0–1023 from the image start.",
+    "Primary superblock begins at offset 1,024 in Ext4, outside this region."
+  ]
+}

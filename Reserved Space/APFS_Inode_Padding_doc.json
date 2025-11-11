@@ -1,0 +1,48 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "Hidden data were written into the padding bytes of APFS inode structures. Each inode includes unused padding fields reserved for alignment and potential future extensions. These regions were used to embed short hidden data fragments without altering active metadata fields. All modified inodes belong to the same APFS node structure.",
+  "image_name": "APFS_Inode_Padding.img",
+  "filesystem": "APFS",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Each inode padding area provided 10 hidden bytes.",
+    "All inodes share the same node offset, indicating contiguous inode block usage.",
+    "Padding bytes are unreferenced by filesystem operations, allowing data persistence across mounts.",
+    "Detection requires full inode structure parsing and validation of padding zero regions."
+  ],
+  "inode_padding_info": {
+    "total_hidden_data_bytes": 100,
+    "hidden_bytes_per_inode": 10,
+    "inodes_used_count": 10,
+    "inode_offsets_bytes": [
+      5230432,
+      5230244,
+      5230056,
+      5229868,
+      5229680,
+      5229492,
+      5229304,
+      5229116,
+      5228928,
+      5228740
+    ],
+    "node_offsets_bytes": [
+      5226496,
+      5226496,
+      5226496,
+      5226496,
+      5226496,
+      5226496,
+      5226496,
+      5226496,
+      5226496,
+      5226496
+    ]
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_bytes": 100,
+    "segments_used": 10,
+    "bytes_per_segment": 10
+  }
+}

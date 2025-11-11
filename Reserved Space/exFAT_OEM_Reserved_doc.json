@@ -1,0 +1,39 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "The hidden payload was written into the slack space at the End of the OEM Sector. This Sector lies in the MBR of the exFAT file system. It otypicaly only occupies 480 byte creaating slack space up to the end of the sector.",
+  "image_name": "ExFat_OEM_reserved.img",
+  "filesystem": "exFAT",
+  "sector_size_bytes": 4096,
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "Data are stored entirely within non-critical slack bytes, preserving filesystem integrity.",
+    "Two slack regions (main and backup OEM) were used, doubling total capacity.",
+    "This method can be detected by comparing OEM-sectors against a clean exFAT MBR template."
+  ],
+  "reserved_region_info": {
+    "regions_used": 2,
+    "entries": [
+      {
+        "region_index": 1,
+        "start_offset_bytes": 37344,
+        "end_offset_bytes": 40960,
+        "region_size_bytes": 3616,
+        "hidden_data_bytes": 3616
+      },
+      {
+        "region_index": 2,
+        "start_offset_bytes": 86432,
+        "end_offset_bytes": 90112,
+        "region_size_bytes": 3616,
+        "hidden_data_bytes": 3616
+      }
+    ],
+    "total_hidden_bytes": 7232
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "segments_used": 2,
+    "bytes_per_segment": 3616,
+    "total_bytes": 7232
+  }
+}

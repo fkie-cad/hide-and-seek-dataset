@@ -1,0 +1,18 @@
+{
+  "description": "Data hidden after the FAT32 FSINFO sector. The payload fills the gap from 0x400 to 0xBFF (2,048 bytes or 4 Sectors) after the FSInfo structur which are reserved",
+  "dataset_title": "Hidden Data in Filesystems",
+  "image": "FAT_After_FSINFO_Reserved.img",
+  "filesystem": "FAT32",
+  "sector_size_bytes": 512,
+  "cluster_size_bytes": 4096,
+  "after_fsinfo_reserved": {
+    "reserved_space_offset_bytes": 1024,
+    "reserved_space_size_bytes": 2048
+  },
+  "payload_summary": {
+    "hidden_data_size_bytes": 2048,
+    "pattern": "HIDDEN DATA",
+    "repeated": true,
+    "plain_text_preview_truncated": "HIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DATAHIDDEN DAT..."
+  }
+}

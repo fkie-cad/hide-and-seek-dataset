@@ -1,0 +1,71 @@
+{
+  "dataset_title": "Hidden Data in Filesystems",
+  "description": "This document describes manual data hiding operations within Btrfs superblock regions. Hidden data were embedded at multiple offsets inside both primary and backup superblocks using direct byte-level modification via dd. CRC32C checksums were recalculated to maintain integrity of the superblock structure.",
+  "image_name": "btrfs_Superblock.img",
+  "filesystem": "btrfs",
+  "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
+  "notes": [
+    "The Btrfs superblock is replicated across the device at multiple fixed offsets (64 KiB, 64 MiB, etc.).",
+    "Hidden data were inserted between metadata fields and padding bytes to avoid corruption.",
+    "CRC32C checksums ensure structural consistency of modified superblocks.",
+    "This demonstrates metadata-level data hiding within Btrfs structures."
+  ],
+  "image_details": {
+    "filesystem_type": "Btrfs",
+    "image_size_bytes": 1073741824,
+    "superblock_offsets_bytes": [
+      65536,
+      67108864
+    ]
+  },
+  "hidden_data_segments": [
+    {
+      "segment_index": 1,
+      "data_pattern": "HIDDEN DATA",
+      "start_offset_hex": "0x1023B",
+      "start_offset_bytes": 65915,
+      "size_bytes": 230
+    },
+    {
+      "segment_index": 2,
+      "data_pattern": "HIDDEN DATA",
+      "start_offset_hex": "0xDCB",
+      "start_offset_bytes": 3531,
+      "end_offset_hex": "0x1000",
+      "end_offset_bytes": 4096,
+      "size_bytes": 565
+    },
+    {
+      "segment_index": 3,
+      "data_pattern": "HIDDEN DATA",
+      "start_offset_hex": "0x400023B",
+      "start_offset_bytes": 67111483,
+      "size_bytes": 240
+    },
+    {
+      "segment_index": 4,
+      "data_pattern": "HIDDEN DATA",
+      "start_offset_hex": "0x4000DCB",
+      "start_offset_bytes": 67115019,
+      "end_offset_hex": "0x4001000",
+      "end_offset_bytes": 67117056,
+      "size_bytes": 565
+    }
+  ],
+  "checksum_info": {
+    "algorithm": "CRC32C (Castagnoli)",
+    "seed": "0xFFFFFFFF",
+    "calculation_range_bytes": [
+      32,
+      4096
+    ],
+    "range_description": "from superblock offset +0x20 to +0x1000",
+    "stored_location": "first 4 bytes of each superblock"
+  },
+  "payload_summary": {
+    "data_pattern": "HIDDEN DATA",
+    "total_hidden_bytes": 1610,
+    "segments_used": 4,
+    "storage_regions": "Primary and backup Btrfs superblocks"
+  }
+}
