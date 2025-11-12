@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into unused slack space within APFS superblocks and object maps. Each superblock and mapping structure leafes unused bytes at the end of a cluster, which are not actively used by the filesystem. This experiment filled the unused slack areas of specific APFS metadata structures with repeated 'HIDDEN DATA' sequences, while leaving other generations untouched.",
+  "description": "Hidden data was written into unused slack space within APFS superblocks and object maps. Each superblock and mapping structure leafes unused bytes at the end of a cluster, which are not actively used by the filesystem. This experiment filled the unused slack areas of specific APFS metadata structures with repeated 'HIDDEN DATA' sequences, while leaving other generations untouched.",
   "image_name": "APFS_Superblock_Slack.img",
   "filesystem": "APFS",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",

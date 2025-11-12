@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were embedded in APFS inode timestamp fields. Each inode contains four 8 byte timestamp values (creation, modification, change, access). The lower 32 bits store nanosecond-precision values but were repurposed to hold 4 byte fragments of hidden data. The structure stays valid, while payload is distributed across multiple inodes and timestamps.",
+  "description": "Hidden data was embedded in APFS inode timestamp fields. Each inode contains four 8 byte timestamp values (creation, modification, change, access). The lower 32 bits store nanosecond-precision values but were repurposed to hold 4 byte fragments of hidden data. The structure stays valid, while payload is distributed across multiple inodes and timestamps.",
   "image_name": "APFS_Timestamp.img",
   "filesystem": "APFS",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",

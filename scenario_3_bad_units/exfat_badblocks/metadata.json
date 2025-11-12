@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into clusters that were deliberately marked as 'bad' in the exFAT File Allocation Table (FAT). By setting FAT entries to the value 0xFFFFFFF7, the filesystem flags these clusters as defective and avoids their use. However, the data region for these clusters remains accessible and was overwritten with repeated 'HIDDEN DATA' strings. This approach stores payloads in unused but logically excluded storage regions.",
+  "description": "Hidden data was written into clusters that were deliberately marked as 'bad' in the exFAT File Allocation Table (FAT). By setting FAT entries to the value 0xFFFFFFF7, the filesystem flags these clusters as defective and avoids their use. However, the data region for these clusters remains accessible and was overwritten with repeated 'HIDDEN DATA' strings. This approach stores payloads in unused but logically excluded storage regions.",
   "image_name": "exFat_BadBlocks.img",
   "filesystem": "exFAT",
   "cluster_size_bytes": 32768,

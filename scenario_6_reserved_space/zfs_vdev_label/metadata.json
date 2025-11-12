@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into the reserved label regions of a ZFS vdev device. Each vdev maintains four 256 KiB labels located at the beginning and end of the device. The first 16 KB of each label region were filled with repeated 'HIDDEN DATA' strings, using areas reserved for bootcode or padding. This manipulation does not affect ZFS pool functionality because it leaves label headers intact and checksums were updated.",
+  "description": "Hidden data was written into the reserved label regions of a ZFS vdev device. Each vdev maintains four 256 KiB labels located at the beginning and end of the device. The first 16 KB of each label region were filled with repeated 'HIDDEN DATA' strings, using areas reserved for bootcode or padding. This manipulation does not affect ZFS pool functionality because it leaves label headers intact and checksums were updated.",
   "image_name": "ZFS_vdev_label.img",
   "filesystem": "ZFS",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",

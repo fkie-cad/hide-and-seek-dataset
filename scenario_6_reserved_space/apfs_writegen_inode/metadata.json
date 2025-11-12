@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into the 4 byte 'write generation counter' field of APFS inodes. This counter normally tracks write operations but can be manipulated to store arbitrary data bytes. Each modified inode carries a 4 byte payload, and the combined data can be reconstructed from all participating inodes.",
+  "description": "Hidden data was written into the 4 byte 'write generation counter' field of APFS inodes. This counter normally tracks write operations but can be manipulated to store arbitrary data bytes. Each modified inode carries a 4 byte payload, and the combined data can be reconstructed from all participating inodes.",
   "image_name": "APFS_WriteGen_Inode.img",
   "filesystem": "APFS",
   "plaintext_preview": "TOP SECRET",

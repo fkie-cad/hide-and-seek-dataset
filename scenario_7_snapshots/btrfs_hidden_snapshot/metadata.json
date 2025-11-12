@@ -19,9 +19,9 @@
   },
   "procedure": [
     "1. The file '/home/File.txt' contained hidden data within its contents.",
-    "2. Additional hidden data were appended at the end of 'Test.txt'.",
+    "2. Additional hidden data was appended at the end of 'Test.txt'.",
     "3. A Btrfs snapshot was created using the invisible Unicode name (U+FEFF).",
-    "4. After snapshot creation, hidden data in the live filesystem were deleted from 'File.txt' and 'Test.txt'.",
+    "4. After snapshot creation, hidden data in the live filesystem was deleted from 'File.txt' and 'Test.txt'.",
     "5. The snapshot was then moved into the hidden system directory '.lib32'.",
     "6. The snapshot remains invisible in standard 'btrfs subvolume list' output."
   ],

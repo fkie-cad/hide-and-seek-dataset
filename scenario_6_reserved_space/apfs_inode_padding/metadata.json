@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into the padding bytes of APFS inode structures. Each inode includes unused padding fields reserved for alignment and potential future extensions. These regions were used to embed short hidden data fragments without altering active metadata fields. All modified inodes belong to the same APFS node structure.",
+  "description": "Hidden data was written into the padding bytes of APFS inode structures. Each inode includes unused padding fields reserved for alignment and potential future extensions. These regions were used to embed short hidden data fragments without altering active metadata fields. All modified inodes belong to the same APFS node structure.",
   "image_name": "APFS_Inode_Padding.img",
   "filesystem": "APFS",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",

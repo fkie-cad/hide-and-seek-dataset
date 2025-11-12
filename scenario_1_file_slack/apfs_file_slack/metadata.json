@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into file slack regions in an APFS filesystem image. The slack space consists of unused bytes at the end of file data blocks that do not align perfectly with the block size. These areas were filled with 'HIDDEN DATA' sequences while keeping file contents intact.",
+  "description": "Hidden data was written into file slack regions in an APFS filesystem image. The slack space consists of unused bytes at the end of file data blocks that do not align perfectly with the block size. These areas were filled with 'HIDDEN DATA' sequences while keeping file contents intact.",
   "image_name": "APFS_File_Slack.img",
   "filesystem": "APFS",
   "block_size_bytes": 4096,

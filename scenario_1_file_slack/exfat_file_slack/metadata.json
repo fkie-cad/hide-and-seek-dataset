@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into the unused slack space of allocated file clusters in an exFAT filesystem image. Visible file contents remained unchanged while the unused tail region of each cluster was filled with repeated 'HIDDEN MESSAGE' patterns. The payload is distributed across many regular files without altering their logical sizes.",
+  "description": "Hidden data was written into the unused slack space of allocated file clusters in an exFAT filesystem image. Visible file contents remained unchanged while the unused tail region of each cluster was filled with repeated 'HIDDEN MESSAGE' patterns. The payload is distributed across many regular files without altering their logical sizes.",
   "image_name": "exfat_File_Slack.img",
   "filesystem": "exFAT",
   "cluster_size_bytes": 32768,

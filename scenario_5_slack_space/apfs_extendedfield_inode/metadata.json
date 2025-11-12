@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were stored in the extended field padding areas within APFS inode structures. These regions are reserved for future extensions of the inode and remain unused under normal conditions.",
+  "description": "Hidden data was stored in the extended field padding areas within APFS inode structures. These regions are reserved for future extensions of the inode and remain unused under normal conditions.",
   "image_name": "APFS_ExtendedField_Inode.img",
   "filesystem": "APFS",
   "plaintext_preview": "HIDDEN TEXT",

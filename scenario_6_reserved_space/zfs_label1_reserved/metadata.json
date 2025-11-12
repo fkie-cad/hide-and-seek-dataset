@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "Hidden data were written into the reserved space located directly after the second vdev label in a ZFS device. This area, typically between 512 KiB and 4 MiB, remains unused by the ZFS filesystem and can therefore store arbitrary data without affecting pool integrity. The region was filled with repeated 'HIDDEN DATA' strings.",
+  "description": "Hidden data was written into the reserved space located directly after the second vdev label in a ZFS device. This area, typically between 512 KiB and 4 MiB, remains unused by the ZFS filesystem and can therefore store arbitrary data without affecting pool integrity. The region was filled with repeated 'HIDDEN DATA' strings.",
   "image_name": "ZFS_label1_reserved.img",
   "filesystem": "ZFS",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",

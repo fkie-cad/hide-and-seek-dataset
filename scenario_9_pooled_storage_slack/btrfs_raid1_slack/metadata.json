@@ -8,8 +8,8 @@
     },
 
     "notes": {
-        "note_1":"Dev2 mirrores data from dev1. This leaves 250 Mib of unused space on dev2 which can be used to hide data",
-        "note_2":"A 50 Mib txt file is hidden in th last 50 Mib of dev2. This file is not referenced by the btrfs file system.",
+        "note_1":"Dev2 mirrores data from dev1. This leaves 250 MiB of unused space on dev2 which can be used to hide data",
+        "note_2":"A 50 MiB txt file is hidden in the last 50 MiB of dev2. This file is not referenced by the btrfs file system.",
         "note_3": "It is important to note that while the data is hidden from the filesystem, it is still physically present on the disk and can be recovered using tools like dd and forensic analysis techniques.",
         "device_sizes": {
             "btrfs_dev1": "500 MiB",

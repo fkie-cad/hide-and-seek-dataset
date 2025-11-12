@@ -1,6 +1,6 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "This documentation explains how hidden data were embedded within Btrfs inode structures. The payload was inserted into reserved 32-byte spaces located inside inodes contained within a single 16 KiB leaf block. All modifications required recalculating the leafs checksum to preserve filesystem consistency.",
+  "description": "This documentation explains how hidden data was embedded within Btrfs inode structures. The payload was inserted into reserved 32-byte spaces located inside inodes contained within a single 16 KiB leaf block. All modifications required recalculating the leafs checksum to preserve filesystem consistency.",
   "image_name": "btrfs_Inode_Reserved.img",
   "filesystem": "Btrfs",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",

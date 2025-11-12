@@ -1,12 +1,12 @@
 {
   "dataset_title": "Hidden Data in Filesystems",
-  "description": "This document describes manual data hiding operations within Btrfs superblock regions. Hidden data were embedded at multiple offsets inside both primary and backup superblocks using direct byte-level modification via dd. CRC32C checksums were recalculated to maintain integrity of the superblock structure.",
+  "description": "This document describes manual data hiding operations within Btrfs superblock regions. Hidden data was embedded at multiple offsets inside both primary and backup superblocks using direct byte-level modification via dd. CRC32C checksums were recalculated to maintain integrity of the superblock structure.",
   "image_name": "btrfs_Superblock.img",
   "filesystem": "btrfs",
   "plaintext_preview": "HIDDEN DATA HIDDEN DATA HIDDEN DATA ...",
   "notes": [
     "The Btrfs superblock is replicated across the device at multiple fixed offsets (64 KiB, 64 MiB, etc.).",
-    "Hidden data were inserted between metadata fields and padding bytes to avoid corruption.",
+    "Hidden data was inserted between metadata fields and padding bytes to avoid corruption.",
     "CRC32C checksums ensure structural consistency of modified superblocks.",
     "This demonstrates metadata-level data hiding within Btrfs structures."
   ],
